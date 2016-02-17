@@ -10,11 +10,16 @@
 		4150DE4D3C149D11DA76C34A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A12903E135A725CE023EF6 /* libPods.a */; };
 		64189FDB1C732C950067F895 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 64189FDA1C732C950067F895 /* main.m */; };
 		64189FDE1C732C950067F895 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 64189FDD1C732C950067F895 /* AppDelegate.m */; };
-		64189FE11C732C950067F895 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64189FE01C732C950067F895 /* ViewController.m */; };
+		64189FE11C732C950067F895 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64189FE01C732C950067F895 /* LoginViewController.m */; };
 		64189FE41C732C950067F895 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64189FE21C732C950067F895 /* Main.storyboard */; };
 		64189FE91C732C960067F895 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64189FE81C732C960067F895 /* Assets.xcassets */; };
 		64189FEC1C732C960067F895 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64189FEA1C732C960067F895 /* LaunchScreen.storyboard */; };
 		64189FFD1C7334270067F895 /* DataValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 64189FFC1C7334270067F895 /* DataValidation.m */; };
+		64AD8A251C743C10004E4A3C /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 64AD8A231C743C10004E4A3C /* unchecked.png */; };
+		64AD8A271C743CE3004E4A3C /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 64AD8A261C743CE3004E4A3C /* checked.png */; };
+		64AD8A291C743FD4004E4A3C /* email_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 64AD8A281C743FD4004E4A3C /* email_icon.png */; };
+		64AD8A2B1C744085004E4A3C /* pass_key.png in Resources */ = {isa = PBXBuildFile; fileRef = 64AD8A2A1C744085004E4A3C /* pass_key.png */; };
+		64AD8A2E1C7491F9004E4A3C /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 64AD8A2D1C7491F9004E4A3C /* Constants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,15 +29,20 @@
 		64189FDA1C732C950067F895 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		64189FDC1C732C950067F895 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		64189FDD1C732C950067F895 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		64189FDF1C732C950067F895 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		64189FE01C732C950067F895 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		64189FDF1C732C950067F895 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		64189FE01C732C950067F895 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		64189FE31C732C950067F895 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		64189FE81C732C960067F895 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64189FEB1C732C960067F895 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		64189FED1C732C960067F895 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		64189FF81C7333730067F895 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		64189FFB1C7334270067F895 /* DataValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataValidation.h; sourceTree = "<group>"; };
 		64189FFC1C7334270067F895 /* DataValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataValidation.m; sourceTree = "<group>"; };
+		64AD8A231C743C10004E4A3C /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked.png; sourceTree = "<group>"; };
+		64AD8A261C743CE3004E4A3C /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked.png; sourceTree = "<group>"; };
+		64AD8A281C743FD4004E4A3C /* email_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email_icon.png; sourceTree = "<group>"; };
+		64AD8A2A1C744085004E4A3C /* pass_key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pass_key.png; sourceTree = "<group>"; };
+		64AD8A2C1C7491F9004E4A3C /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		64AD8A2D1C7491F9004E4A3C /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		64BE49D2FC5313C424664432 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +79,7 @@
 		64189FD81C732C950067F895 /* fels_111 */ = {
 			isa = PBXGroup;
 			children = (
+				64AD8A211C743A2E004E4A3C /* Resources */,
 				64189FF61C7332080067F895 /* Utilities */,
 				64189FF51C7331DE0067F895 /* Controllers */,
 				64189FF41C7331840067F895 /* Storyboards */,
@@ -109,8 +120,8 @@
 		64189FF51C7331DE0067F895 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				64189FDF1C732C950067F895 /* ViewController.h */,
-				64189FE01C732C950067F895 /* ViewController.m */,
+				64189FDF1C732C950067F895 /* LoginViewController.h */,
+				64189FE01C732C950067F895 /* LoginViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -118,11 +129,23 @@
 		64189FF61C7332080067F895 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				64189FF81C7333730067F895 /* Constants.h */,
 				64189FFB1C7334270067F895 /* DataValidation.h */,
 				64189FFC1C7334270067F895 /* DataValidation.m */,
+				64AD8A2C1C7491F9004E4A3C /* Constants.h */,
+				64AD8A2D1C7491F9004E4A3C /* Constants.m */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		64AD8A211C743A2E004E4A3C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				64AD8A2A1C744085004E4A3C /* pass_key.png */,
+				64AD8A281C743FD4004E4A3C /* email_icon.png */,
+				64AD8A261C743CE3004E4A3C /* checked.png */,
+				64AD8A231C743C10004E4A3C /* unchecked.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		6CF120F29333601570173982 /* Pods */ = {
@@ -202,9 +225,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64AD8A271C743CE3004E4A3C /* checked.png in Resources */,
 				64189FEC1C732C960067F895 /* LaunchScreen.storyboard in Resources */,
+				64AD8A2B1C744085004E4A3C /* pass_key.png in Resources */,
 				64189FE91C732C960067F895 /* Assets.xcassets in Resources */,
+				64AD8A291C743FD4004E4A3C /* email_icon.png in Resources */,
 				64189FE41C732C950067F895 /* Main.storyboard in Resources */,
+				64AD8A251C743C10004E4A3C /* unchecked.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +290,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64189FE11C732C950067F895 /* ViewController.m in Sources */,
+				64AD8A2E1C7491F9004E4A3C /* Constants.m in Sources */,
+				64189FE11C732C950067F895 /* LoginViewController.m in Sources */,
 				64189FDE1C732C950067F895 /* AppDelegate.m in Sources */,
 				64189FDB1C732C950067F895 /* main.m in Sources */,
 				64189FFD1C7334270067F895 /* DataValidation.m in Sources */,
