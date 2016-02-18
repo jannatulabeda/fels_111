@@ -33,4 +33,9 @@ extern NSInteger const MAX_LENGTH_USER_NAME;
 extern NSInteger const MAX_LENGTH_EMAIL;
 extern NSInteger const MIN_LENGTH_PASSWORD;
 
+#pragma mark - resources 
+
+extern NSString *const CHECKED_IMAGE;
+extern NSString *const UNCHECKED_IMAGE;
+
 @end

@@ -33,4 +33,9 @@ NSInteger const MAX_LENGTH_USER_NAME = 50;
 NSInteger const MAX_LENGTH_EMAIL = 255;
 NSInteger const MIN_LENGTH_PASSWORD = 6;
 
+#pragma mark - resources
+
+NSString *const CHECKED_IMAGE = @"checked.png";
+NSString *const UNCHECKED_IMAGE = @"unchecked.png";	
+
 @end

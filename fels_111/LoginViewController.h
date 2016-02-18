@@ -10,6 +10,7 @@
 
 @interface LoginViewController : UIViewController
 
+- (IBAction)toggleRememberMeButtonImage:(id)sender;
 
 @end
 
