@@ -28,4 +28,9 @@ extern NSString *const KEY_LEARNED_WORDS;
 extern NSString *const KEY_USER;
 extern NSString *const KEY_MESSAGE_RESPONSE;
 
+#pragma mark - Data validation Constants
+extern NSInteger const MAX_LENGTH_USER_NAME;
+extern NSInteger const MAX_LENGTH_EMAIL;
+extern NSInteger const MIN_LENGTH_PASSWORD;
+
 @end
