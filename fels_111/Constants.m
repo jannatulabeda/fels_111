@@ -28,4 +28,9 @@ NSString *const KEY_LEARNED_WORDS = @"learned_words";
 NSString *const KEY_USER = @"user";
 NSString *const KEY_MESSAGE_RESPONSE = @"message";
 
+#pragma mark - Data validation Constants
+NSInteger const MAX_LENGTH_USER_NAME = 50;
+NSInteger const MAX_LENGTH_EMAIL = 255;
+NSInteger const MIN_LENGTH_PASSWORD = 6;
+
 @end
