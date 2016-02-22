@@ -15,6 +15,9 @@
 		64189FE91C732C960067F895 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64189FE81C732C960067F895 /* Assets.xcassets */; };
 		64189FEC1C732C960067F895 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64189FEA1C732C960067F895 /* LaunchScreen.storyboard */; };
 		64189FFD1C7334270067F895 /* DataValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 64189FFC1C7334270067F895 /* DataValidation.m */; };
+		648D83DF1C76DE7600F543B6 /* name.png in Resources */ = {isa = PBXBuildFile; fileRef = 648D83DE1C76DE7600F543B6 /* name.png */; };
+		648EC8391C7AE54100D62327 /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 648EC8381C7AE54100D62327 /* avatar.png */; };
+		648EC83B1C7AE5BF00D62327 /* icon_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 648EC83A1C7AE5BF00D62327 /* icon_avatar.png */; };
 		64AD8A251C743C10004E4A3C /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 64AD8A231C743C10004E4A3C /* unchecked.png */; };
 		64AD8A271C743CE3004E4A3C /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 64AD8A261C743CE3004E4A3C /* checked.png */; };
 		64AD8A291C743FD4004E4A3C /* email_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 64AD8A281C743FD4004E4A3C /* email_icon.png */; };
@@ -25,6 +28,7 @@
 		B1E7F8521C75C5360096920B /* MakeParam.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E7F84C1C75C5360096920B /* MakeParam.m */; };
 		B1E7F8531C75C5360096920B /* MakeURL.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E7F84E1C75C5360096920B /* MakeURL.m */; };
 		B1E7F8541C75C5360096920B /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E7F8501C75C5360096920B /* Parser.m */; };
+		64FF16031C7588FB00AAB7EE /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64FF16021C7588FB00AAB7EE /* RegisterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,9 @@
 		64189FED1C732C960067F895 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64189FFB1C7334270067F895 /* DataValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataValidation.h; sourceTree = "<group>"; };
 		64189FFC1C7334270067F895 /* DataValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataValidation.m; sourceTree = "<group>"; };
+		648D83DE1C76DE7600F543B6 /* name.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = name.png; sourceTree = "<group>"; };
+		648EC8381C7AE54100D62327 /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
+		648EC83A1C7AE5BF00D62327 /* icon_avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_avatar.png; sourceTree = "<group>"; };
 		64AD8A231C743C10004E4A3C /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked.png; sourceTree = "<group>"; };
 		64AD8A261C743CE3004E4A3C /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked.png; sourceTree = "<group>"; };
 		64AD8A281C743FD4004E4A3C /* email_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email_icon.png; sourceTree = "<group>"; };
@@ -59,6 +66,8 @@
 		B1E7F84E1C75C5360096920B /* MakeURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MakeURL.m; sourceTree = "<group>"; };
 		B1E7F84F1C75C5360096920B /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
 		B1E7F8501C75C5360096920B /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parser.m; sourceTree = "<group>"; };
+		64FF16011C7588FB00AAB7EE /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		64FF16021C7588FB00AAB7EE /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +149,8 @@
 			children = (
 				64189FDF1C732C950067F895 /* LoginViewController.h */,
 				64189FE01C732C950067F895 /* LoginViewController.m */,
+				64FF16011C7588FB00AAB7EE /* RegisterViewController.h */,
+				64FF16021C7588FB00AAB7EE /* RegisterViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -158,6 +169,9 @@
 		64AD8A211C743A2E004E4A3C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				648EC83A1C7AE5BF00D62327 /* icon_avatar.png */,
+				648EC8381C7AE54100D62327 /* avatar.png */,
+				648D83DE1C76DE7600F543B6 /* name.png */,
 				64AD8A2A1C744085004E4A3C /* pass_key.png */,
 				64AD8A281C743FD4004E4A3C /* email_icon.png */,
 				64AD8A261C743CE3004E4A3C /* checked.png */,
@@ -258,10 +272,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				648EC8391C7AE54100D62327 /* avatar.png in Resources */,
+				648EC83B1C7AE5BF00D62327 /* icon_avatar.png in Resources */,
 				64AD8A271C743CE3004E4A3C /* checked.png in Resources */,
 				64189FEC1C732C960067F895 /* LaunchScreen.storyboard in Resources */,
 				64AD8A2B1C744085004E4A3C /* pass_key.png in Resources */,
 				64189FE91C732C960067F895 /* Assets.xcassets in Resources */,
+				648D83DF1C76DE7600F543B6 /* name.png in Resources */,
 				64AD8A291C743FD4004E4A3C /* email_icon.png in Resources */,
 				64189FE41C732C950067F895 /* Main.storyboard in Resources */,
 				64AD8A251C743C10004E4A3C /* unchecked.png in Resources */,
@@ -324,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64AD8A2E1C7491F9004E4A3C /* Constants.m in Sources */,
+				64FF16031C7588FB00AAB7EE /* RegisterViewController.m in Sources */,
 				64189FE11C732C950067F895 /* LoginViewController.m in Sources */,
 				B1E7F8481C75C5160096920B /* User.m in Sources */,
 				64189FDE1C732C950067F895 /* AppDelegate.m in Sources */,
