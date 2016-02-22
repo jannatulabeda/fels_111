@@ -16,6 +16,7 @@ NSString *const LOG_IN_REQUEST = @"/login.json"; // Log in request
 NSString *const SIGN_UP_REQUEST = @"/users.json"; // Sign up request
 
 #pragma mark - KEY Constants
+NSString *const KEY_ID = @"id";
 NSString *const KEY_EMAIL = @"email";
 NSString *const KEY_PASSWORD = @"password";
 NSString *const KEY_PASSWORD_CONFIRMATION = @"password_confirmation";
@@ -37,5 +38,12 @@ NSInteger const MIN_LENGTH_PASSWORD = 6;
 
 NSString *const CHECKED_IMAGE = @"checked.png";
 NSString *const UNCHECKED_IMAGE = @"unchecked.png";	
+
+#pragma mark - Error Strings
+NSString *const ERROR_EMAIL_REQUIRED = @"Email address required";
+NSString *const ERROR_EMAIL_INVALID = @"Email address is invalid";
+NSString *const ERROR_PASSWORD_REQUIRED = @"Password required";
+NSString *const ERROR_NAME_REQUIRED = @"Name required";
+NSString *const ERROR_INVALID_COMBINATION = @"Invalid email/password combination";
 
 @end

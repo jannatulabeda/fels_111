@@ -7,7 +7,6 @@
 //
 
 #import "DataValidation.h"
-#import "DataValidation.h"
 #import "Constants.h"
 
 @implementation DataValidation
@@ -17,7 +16,7 @@
     
     // Check if email is empty
     if ([emailAddress stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length == 0) {
-        *errorMessage = @"Email address required";
+        *errorMessage = ERROR_EMAIL_REQUIRED;
         
         return NO;
     }
@@ -33,7 +32,7 @@
         
         // Check if email is invalid
         if (![emailPredicate evaluateWithObject:emailAddress]) {
-            *errorMessage = @"Email address is invalid";
+            *errorMessage = ERROR_EMAIL_INVALID;
             
             return NO;
         }
@@ -54,14 +53,14 @@
     
     // Check if password is empty
     if ([password stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length == 0) {
-        *errorMessage = @"Password required";
+        *errorMessage = ERROR_PASSWORD_REQUIRED;
         
         return NO;
     }
     
     // Check minimum length
     if (password.length < MIN_LENGTH_PASSWORD) {
-        *errorMessage = [NSString stringWithFormat:@"Password should be at least %ld characters long",(long)MIN_LENGTH_PASSWORD];
+        *errorMessage = [NSString stringWithFormat:@"Password should be at least %ld characters",(long)MIN_LENGTH_PASSWORD];
         
         return NO;
     }
@@ -74,7 +73,7 @@
     
     // Check if name is empty
     if ([name stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length == 0) {
-        *errorMessage = @"Name required";
+        *errorMessage = ERROR_NAME_REQUIRED;
         
         return NO;
     }

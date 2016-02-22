@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "Constants.h"
+#import "LoginManager.h"
 
 @interface LoginViewController ()
 
@@ -37,5 +38,18 @@
     [sender setImage:[UIImage imageNamed:CHECKED_IMAGE] forState:UIControlStateSelected];
     [sender setSelected:YES];
   }
+}
+
+- (IBAction)signInButtonPressed:(id)sender {
+  [LoginManager doSignInWithEmail:self.emailLoginTextField.text
+                         password:self.passwordLoginTextField.text
+                         remember:YES
+                      errorMessage:^(BOOL isValid, NSString *errMessage){
+                        if (!isValid) {
+                          self.loginErrorLabel.text = ERROR_INVALID_COMBINATION;
+                        } else {
+                          self.loginErrorLabel.text = errMessage;
+                        }
+                      }];
 }
 @end

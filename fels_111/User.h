@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface User : NSObject
-@property (assign, nonatomic) int id;
+@property (assign, nonatomic) int userId;
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *email;
 @property (strong, nonatomic) NSString *avatar;

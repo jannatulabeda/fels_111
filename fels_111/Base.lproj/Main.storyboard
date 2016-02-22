@@ -70,6 +70,9 @@
                                     <constraint firstAttribute="width" constant="81" id="48c-ki-xBk"/>
                                 </constraints>
                                 <state key="normal" title="Sign in"/>
+                                <connections>
+                                    <action selector="signInButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nVS-j0-O31"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQ4-h3-D73">
                                 <rect key="frame" x="231" y="522" width="138" height="30"/>
@@ -102,6 +105,15 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZW-x8-8YJ" userLabel="Login Error">
+                                <rect key="frame" x="201" y="311" width="200" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="15" id="1WW-Ig-XL5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -113,13 +125,16 @@
                             <constraint firstItem="qmB-oC-M2E" firstAttribute="leading" secondItem="bsS-CN-JUp" secondAttribute="leading" id="G8n-bA-SG7"/>
                             <constraint firstItem="rHG-U1-cv4" firstAttribute="centerX" secondItem="IQ4-h3-D73" secondAttribute="centerX" id="KH6-dV-Irb"/>
                             <constraint firstItem="61G-iB-65s" firstAttribute="top" secondItem="TRJ-CT-xhf" secondAttribute="top" id="LkC-9l-Ai6"/>
+                            <constraint firstItem="tZW-x8-8YJ" firstAttribute="top" secondItem="0tf-FS-p7d" secondAttribute="bottom" constant="16" id="NVq-RD-zev"/>
                             <constraint firstItem="TRJ-CT-xhf" firstAttribute="leading" secondItem="61G-iB-65s" secondAttribute="trailing" constant="8" symbolic="YES" id="QAE-uW-dOI"/>
                             <constraint firstItem="IQ4-h3-D73" firstAttribute="centerX" secondItem="3DZ-d6-5NG" secondAttribute="centerXWithinMargins" id="TIC-zc-vSv"/>
                             <constraint firstItem="0tf-FS-p7d" firstAttribute="top" secondItem="vqZ-kf-zq9" secondAttribute="top" id="TZm-g1-vqd"/>
+                            <constraint firstItem="tZW-x8-8YJ" firstAttribute="trailing" secondItem="In3-ST-D9H" secondAttribute="trailing" id="U4E-6E-gOi"/>
                             <constraint firstItem="GbO-Yi-e3r" firstAttribute="centerX" secondItem="3DZ-d6-5NG" secondAttribute="centerX" id="Ukq-CA-JKw"/>
                             <constraint firstItem="In3-ST-D9H" firstAttribute="top" secondItem="TRJ-CT-xhf" secondAttribute="bottom" constant="8" id="UpJ-xZ-DZz"/>
                             <constraint firstItem="SdF-lL-z26" firstAttribute="centerX" secondItem="TRJ-CT-xhf" secondAttribute="centerX" id="YEB-ta-XYc"/>
                             <constraint firstItem="In3-ST-D9H" firstAttribute="centerX" secondItem="0tf-FS-p7d" secondAttribute="centerX" id="Ymy-3c-axm"/>
+                            <constraint firstItem="tZW-x8-8YJ" firstAttribute="centerX" secondItem="In3-ST-D9H" secondAttribute="centerX" id="ZEY-A0-Lex"/>
                             <constraint firstItem="0tf-FS-p7d" firstAttribute="leading" secondItem="SdF-lL-z26" secondAttribute="leading" id="aDx-cC-Z4e"/>
                             <constraint firstItem="0tf-FS-p7d" firstAttribute="leading" secondItem="vqZ-kf-zq9" secondAttribute="trailing" constant="8" symbolic="YES" id="aNp-wl-eiS"/>
                             <constraint firstItem="rHG-U1-cv4" firstAttribute="top" secondItem="0tf-FS-p7d" secondAttribute="bottom" constant="45" id="blI-QX-Yrm"/>
@@ -136,10 +151,16 @@
                             <constraint firstItem="qmB-oC-M2E" firstAttribute="centerX" secondItem="In3-ST-D9H" secondAttribute="centerX" id="ryf-Bc-F29"/>
                             <constraint firstItem="qmB-oC-M2E" firstAttribute="top" secondItem="bsS-CN-JUp" secondAttribute="bottom" constant="8" symbolic="YES" id="uYb-V4-0wD"/>
                             <constraint firstItem="vqZ-kf-zq9" firstAttribute="trailing" secondItem="bsS-CN-JUp" secondAttribute="trailing" id="uz3-Zy-aAL"/>
+                            <constraint firstItem="tZW-x8-8YJ" firstAttribute="leading" secondItem="In3-ST-D9H" secondAttribute="leading" id="vxW-K6-m84"/>
                             <constraint firstItem="vqZ-kf-zq9" firstAttribute="top" secondItem="3DZ-d6-5NG" secondAttribute="top" constant="268" id="wFw-jI-dcU"/>
                             <constraint firstItem="In3-ST-D9H" firstAttribute="top" secondItem="61G-iB-65s" secondAttribute="bottom" constant="8" symbolic="YES" id="zHX-lv-aqZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailLoginTextField" destination="qmB-oC-M2E" id="zXT-cX-cwB"/>
+                        <outlet property="loginErrorLabel" destination="tZW-x8-8YJ" id="Uw0-jW-hZF"/>
+                        <outlet property="passwordLoginTextField" destination="In3-ST-D9H" id="q2p-Ta-dV1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
