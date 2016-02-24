@@ -9,12 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "User.h"
 #import "LessonCategory.h"
+#import "Lesson.h"
 
 @interface Parser : NSObject
 
 // Parse json data response for log in request
 // Returns user information
--(User *)parseLoginResponse:(id)responseData;
+- (User *)parseLoginResponse:(id)responseData;
 
 // Parse json data response for sign up request
 // Returns success message
@@ -23,4 +24,9 @@
 // Parse json data response for get categories request
 // Returns NSArray of categories
 -(NSArray *)parseGetCategoriesResponse:(id)responseData;
+
+// Parse json data response for create lesson request
+// Returns NSArray of words
+- (Lesson *)parseCreateLessonResponse:(id)responseData;
+
 @end

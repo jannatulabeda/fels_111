@@ -12,14 +12,14 @@
 
 // Generate sign in param for Sign in API
 // Return parameter as a dictionary
-+(NSDictionary *)makeLoginParamWithEmail:(NSString *)email
++ (NSDictionary *)makeLoginParamWithEmail:(NSString *)email
                            password:(NSString *)password
                          rememberMe:(BOOL)rememberMe;
 
 
 // Generate sign up param for Sign up API
 // Return parameter as a dictionary
-+(NSDictionary *)makeSingUpParamWithName:(NSString *)name
++ (NSDictionary *)makeSingUpParamWithName:(NSString *)name
                                    Email:(NSString *)email
                                  password:(NSString *)password
                        confirmedPassword:(NSString *)confirmedPassword;
@@ -29,4 +29,8 @@
 +(NSDictionary *)makeCategoryParamWithPage:(int)page
                                    perPage:(int)perPage
                                  authToken:(NSString *)authToken;
+
+// Generate create lesson param for Create Lesson API
+// Return parameter as a dictionary
++ (NSDictionary *)makeCreateLessonParamWithAuthToken:(NSString *)authToken;
 @end

@@ -13,7 +13,7 @@
 
 // Generate sign in param for Sign in API
 // Return parameter as a dictionary
-+(NSDictionary *)makeLoginParamWithEmail:(NSString *)email
++ (NSDictionary *)makeLoginParamWithEmail:(NSString *)email
                                 password:(NSString *)password
                               rememberMe:(BOOL)rememberMe {
     NSDictionary *param = @{KEY_SESSION :@{ KEY_EMAIL: email,
@@ -25,7 +25,7 @@
 
 // Generate sign up param for Sign up API
 // Return parameter as a dictionary
-+(NSDictionary *)makeSingUpParamWithName:(NSString *)name
++ (NSDictionary *)makeSingUpParamWithName:(NSString *)name
                                    Email:(NSString *)email
                                 password:(NSString *)password
                        confirmedPassword:(NSString *)confirmedPassword {
@@ -47,4 +47,12 @@
                             KEY_AUTH_TOKEN : authToken};
     return param;
 }
+
+// Generate create lesson param for Create Lesson API
+// Return parameter as a dictionary
++ (NSDictionary *)makeCreateLessonParamWithAuthToken:(NSString *)authToken {
+    NSDictionary *param = @{KEY_AUTH_TOKEN : authToken};
+    return param;
+}
+
 @end

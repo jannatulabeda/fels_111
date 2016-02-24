@@ -8,12 +8,13 @@
 
 #import "Parser.h"
 #import "Constants.h"
+#import "Answer.h"
 
 @implementation Parser
 
 // Parse json data response for log in request
 // Returns user information
--(User *)parseLoginResponse:(id)responseData {
+- (User *)parseLoginResponse:(id)responseData {
     
     NSDictionary *logInData = [self parseJSONData:responseData];
     NSDictionary *userInfo = [logInData objectForKey:KEY_USER];
@@ -31,7 +32,7 @@
 
 // Parse json data response for sign up request
 // Returns success message
--(NSString *)parseSignUpResponse:(id)responseData{
+- (NSString *)parseSignUpResponse:(id)responseData{
     
     NSDictionary *signUpData = [self parseJSONData:responseData];
     NSString *successMessage = @"";
@@ -61,6 +62,44 @@
     }
     
     return categoryArray;
+}
+
+- (Lesson *)parseCreateLessonResponse:(id)responseData {
+    
+    NSDictionary *lessonDict = [[self parseJSONData:responseData] objectForKey:KEY_LESSON];
+    
+    Lesson *lessonObject = [[Lesson alloc]init];
+    lessonObject.lessonId = [[lessonDict objectForKey:KEY_ID] intValue];
+    lessonObject.lessonName = [lessonDict objectForKey:KEY_NAME];
+    
+    // Make words array
+    NSArray *wordsArrayFromResponse = [lessonDict objectForKey:KEY_WORDS];
+    NSMutableArray *wordsArray = [[NSMutableArray alloc] init];
+    for (NSDictionary *wordDict in wordsArrayFromResponse) {
+      // Make each word object
+      Word *word = [[Word alloc] init];
+      word.wordContent = [wordDict objectForKey:KEY_CONTENT];
+      word.wordId = [[wordDict objectForKey:KEY_ID] intValue];
+      word.resultId = [wordDict objectForKey:KEY_RESULT_ID];
+      
+      NSArray *answersArrayFromResponse = [wordDict objectForKey:KEY_ANSWERS];
+      NSMutableArray *answerArray = [[NSMutableArray alloc]init];
+      for (NSDictionary *answerDict in answersArrayFromResponse) {
+        //Make each answer object
+        Answer *answer = [[Answer alloc] init];
+        answer.answerId = [[answerDict objectForKey:KEY_ID] intValue];
+        answer.answerContent = [answerDict objectForKey:KEY_CONTENT];
+        answer.isCorrect = [[answerDict objectForKey:KEY_IS_CORRECT] boolValue];
+        
+        [answerArray addObject:answer];
+      }
+      word.answersArray = answerArray;
+      
+      [wordsArray addObject:word];
+    }
+    lessonObject.wordsArray = wordsArray;
+    
+    return lessonObject;
 }
 
 // Parse JSON data and returns as a dictionary
