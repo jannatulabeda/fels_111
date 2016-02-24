@@ -25,6 +25,12 @@
 		64AD8A2B1C744085004E4A3C /* pass_key.png in Resources */ = {isa = PBXBuildFile; fileRef = 64AD8A2A1C744085004E4A3C /* pass_key.png */; };
 		64AD8A2E1C7491F9004E4A3C /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 64AD8A2D1C7491F9004E4A3C /* Constants.m */; };
 		64FF16031C7588FB00AAB7EE /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64FF16021C7588FB00AAB7EE /* RegisterViewController.m */; };
+		B1032AFC1C7C813B00D7B269 /* Lesson.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1032AFB1C7C813B00D7B269 /* Lesson.storyboard */; };
+		B1032B031C7C817900D7B269 /* CategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1032AFE1C7C817900D7B269 /* CategoryTableViewController.m */; };
+		B1032B041C7C817900D7B269 /* LessonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1032B001C7C817900D7B269 /* LessonViewController.m */; };
+		B1032B051C7C817900D7B269 /* ResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1032B021C7C817900D7B269 /* ResultTableViewController.m */; };
+		B1032B0A1C7C81A500D7B269 /* CategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1032B071C7C81A500D7B269 /* CategoryTableViewCell.m */; };
+		B1032B0B1C7C81A500D7B269 /* ResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1032B091C7C81A500D7B269 /* ResultTableViewCell.m */; };
 		B1E7F8481C75C5160096920B /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E7F8471C75C5160096920B /* User.m */; };
 		B1E7F8511C75C5360096920B /* APIHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E7F84A1C75C5360096920B /* APIHandler.m */; };
 		B1E7F8521C75C5360096920B /* MakeParam.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E7F84C1C75C5360096920B /* MakeParam.m */; };
@@ -61,6 +67,17 @@
 		64BE49D2FC5313C424664432 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		64FF16011C7588FB00AAB7EE /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		64FF16021C7588FB00AAB7EE /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		B1032AFB1C7C813B00D7B269 /* Lesson.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Lesson.storyboard; sourceTree = "<group>"; };
+		B1032AFD1C7C817900D7B269 /* CategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableViewController.h; sourceTree = "<group>"; };
+		B1032AFE1C7C817900D7B269 /* CategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewController.m; sourceTree = "<group>"; };
+		B1032AFF1C7C817900D7B269 /* LessonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LessonViewController.h; sourceTree = "<group>"; };
+		B1032B001C7C817900D7B269 /* LessonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LessonViewController.m; sourceTree = "<group>"; };
+		B1032B011C7C817900D7B269 /* ResultTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultTableViewController.h; sourceTree = "<group>"; };
+		B1032B021C7C817900D7B269 /* ResultTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultTableViewController.m; sourceTree = "<group>"; };
+		B1032B061C7C81A500D7B269 /* CategoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableViewCell.h; sourceTree = "<group>"; };
+		B1032B071C7C81A500D7B269 /* CategoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewCell.m; sourceTree = "<group>"; };
+		B1032B081C7C81A500D7B269 /* ResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultTableViewCell.h; sourceTree = "<group>"; };
+		B1032B091C7C81A500D7B269 /* ResultTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultTableViewCell.m; sourceTree = "<group>"; };
 		B1E7F8461C75C5160096920B /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		B1E7F8471C75C5160096920B /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		B1E7F8491C75C5360096920B /* APIHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIHandler.h; sourceTree = "<group>"; };
@@ -107,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				648EC83C1C7B09B000D62327 /* Manager */,
+				B1032B0C1C7C81CC00D7B269 /* TableCell */,
 				B1E7F8551C75C53E0096920B /* APIHandler */,
 				64AD8A211C743A2E004E4A3C /* Resources */,
 				64189FF61C7332080067F895 /* Utilities */,
@@ -142,6 +160,7 @@
 		64189FF41C7331840067F895 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				B1032AFB1C7C813B00D7B269 /* Lesson.storyboard */,
 				64189FE21C732C950067F895 /* Main.storyboard */,
 				64189FEA1C732C960067F895 /* LaunchScreen.storyboard */,
 			);
@@ -151,6 +170,12 @@
 		64189FF51C7331DE0067F895 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B1032AFD1C7C817900D7B269 /* CategoryTableViewController.h */,
+				B1032AFE1C7C817900D7B269 /* CategoryTableViewController.m */,
+				B1032AFF1C7C817900D7B269 /* LessonViewController.h */,
+				B1032B001C7C817900D7B269 /* LessonViewController.m */,
+				B1032B011C7C817900D7B269 /* ResultTableViewController.h */,
+				B1032B021C7C817900D7B269 /* ResultTableViewController.m */,
 				64189FDF1C732C950067F895 /* LoginViewController.h */,
 				64189FE01C732C950067F895 /* LoginViewController.m */,
 				64FF16011C7588FB00AAB7EE /* RegisterViewController.h */,
@@ -208,6 +233,17 @@
 				21A12903E135A725CE023EF6 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B1032B0C1C7C81CC00D7B269 /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				B1032B061C7C81A500D7B269 /* CategoryTableViewCell.h */,
+				B1032B071C7C81A500D7B269 /* CategoryTableViewCell.m */,
+				B1032B081C7C81A500D7B269 /* ResultTableViewCell.h */,
+				B1032B091C7C81A500D7B269 /* ResultTableViewCell.m */,
+			);
+			name = TableCell;
 			sourceTree = "<group>";
 		};
 		B1E7F8551C75C53E0096920B /* APIHandler */ = {
@@ -285,6 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1032AFC1C7C813B00D7B269 /* Lesson.storyboard in Resources */,
 				648EC8391C7AE54100D62327 /* avatar.png in Resources */,
 				648EC83B1C7AE5BF00D62327 /* icon_avatar.png in Resources */,
 				64AD8A271C743CE3004E4A3C /* checked.png in Resources */,
@@ -354,14 +391,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				64AD8A2E1C7491F9004E4A3C /* Constants.m in Sources */,
+				B1032B0A1C7C81A500D7B269 /* CategoryTableViewCell.m in Sources */,
+				B1032B0B1C7C81A500D7B269 /* ResultTableViewCell.m in Sources */,
+				B1032B031C7C817900D7B269 /* CategoryTableViewController.m in Sources */,
 				64FF16031C7588FB00AAB7EE /* RegisterViewController.m in Sources */,
 				64189FE11C732C950067F895 /* LoginViewController.m in Sources */,
 				B1E7F8481C75C5160096920B /* User.m in Sources */,
+				B1032B041C7C817900D7B269 /* LessonViewController.m in Sources */,
 				64189FDE1C732C950067F895 /* AppDelegate.m in Sources */,
 				648EC8421C7B112B00D62327 /* LoginManager.m in Sources */,
 				B1E7F8541C75C5360096920B /* Parser.m in Sources */,
 				64189FDB1C732C950067F895 /* main.m in Sources */,
 				B1E7F8521C75C5360096920B /* MakeParam.m in Sources */,
+				B1032B051C7C817900D7B269 /* ResultTableViewController.m in Sources */,
 				64189FFD1C7334270067F895 /* DataValidation.m in Sources */,
 				B1E7F8531C75C5360096920B /* MakeURL.m in Sources */,
 				B1E7F8511C75C5360096920B /* APIHandler.m in Sources */,
