@@ -22,6 +22,11 @@
 +(NSDictionary *)makeSingUpParamWithName:(NSString *)name
                                    Email:(NSString *)email
                                  password:(NSString *)password
-                               confirmedPassword:(NSString *)confirmedPassword;
+                       confirmedPassword:(NSString *)confirmedPassword;
 
+// Generate category param for Get Categories API
+// Return parameter as a dictionary
++(NSDictionary *)makeCategoryParamWithPage:(int)page
+                                   perPage:(int)perPage
+                                 authToken:(NSString *)authToken;
 @end

@@ -52,4 +52,32 @@
     }];
 }
 
+/**
+ * Do get request
+ *
+ * @param url GET request url
+ * @param params Parameters needed for get request
+ * @param success Success block for receiving success response
+ * @param fail fail block for receiving failure response
+ */
++ (void)getWithUrl:(NSString *)url
+            params:(NSDictionary *)params
+           success:(ResponseSuccess)success
+              fail:(ResponseFail)fail {
+    
+    // Get session manager
+    AFHTTPSessionManager *manager = [self manager];
+    
+    // Make get request
+    [manager GET:url parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        success(responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (fail) {
+            fail(error);
+        }
+    }];
+}
+
 @end

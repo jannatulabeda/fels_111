@@ -37,4 +37,14 @@
     return param;
 }
 
+// Generate category param for Get Categories API
+// Return parameter as a dictionary
++(NSDictionary *)makeCategoryParamWithPage:(int)page
+                                   perPage:(int)perPage
+                                 authToken:(NSString *)authToken {
+    NSDictionary *param = @{KEY_PAGE: [NSNumber numberWithInt:page],
+                            KEY_PER_PAGE: [NSNumber numberWithInt:perPage],
+                            KEY_AUTH_TOKEN : authToken};
+    return param;
+}
 @end

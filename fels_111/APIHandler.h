@@ -28,4 +28,17 @@ typedef void(^ResponseFail)(NSError *error);
                            params:(NSDictionary *)params
                           success:(ResponseSuccess)success
                              fail:(ResponseFail)fail;
+
+/**
+ * Do get request
+ *
+ * @param url GET request url
+ * @param params Parameters needed for get request
+ * @param success Success block for receiving success response
+ * @param fail fail block for receiving failure response
+ */
++ (void)getWithUrl:(NSString *)url
+            params:(NSDictionary *)params
+           success:(ResponseSuccess)success
+              fail:(ResponseFail)fail;
 @end

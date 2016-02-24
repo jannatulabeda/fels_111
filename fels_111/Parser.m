@@ -41,6 +41,28 @@
     return successMessage;
 }
 
+// Parse json data response for get categories request
+// Returns NSArray of categories
+-(NSArray *)parseGetCategoriesResponse:(id)responseData {
+    
+    NSDictionary *categoriesData = [self parseJSONData:responseData];;
+    NSMutableArray *categoryArray = [[NSMutableArray alloc]init];
+    
+    for (NSDictionary *categoryDict in [categoriesData objectForKey:KEY_CATEGORIES]) {
+        
+        LessonCategory *lessonCategory = [[LessonCategory alloc]init];
+        lessonCategory.categoryId = [[categoryDict objectForKey:KEY_ID] intValue];
+        lessonCategory.learnedWords = [[categoryDict objectForKey:KEY_LEARNED_WORDS] intValue];
+        lessonCategory.categoryName = [categoryDict objectForKey:KEY_NAME];
+        lessonCategory.imageURL = [categoryDict objectForKey:KEY_PHOTO];
+        lessonCategory.totalPages = [[categoriesData objectForKey:KEY_TOTAL_PAGES] intValue];
+        
+        [categoryArray addObject:lessonCategory];
+    }
+    
+    return categoryArray;
+}
+
 // Parse JSON data and returns as a dictionary
 - (id)parseJSONData:(id)responseData {
     if ([responseData isKindOfClass:[NSData class]]) {

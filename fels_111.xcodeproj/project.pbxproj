@@ -36,6 +36,7 @@
 		B1E7F8521C75C5360096920B /* MakeParam.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E7F84C1C75C5360096920B /* MakeParam.m */; };
 		B1E7F8531C75C5360096920B /* MakeURL.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E7F84E1C75C5360096920B /* MakeURL.m */; };
 		B1E7F8541C75C5360096920B /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E7F8501C75C5360096920B /* Parser.m */; };
+		B1F7055C1C7DAB1C00034303 /* LessonCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F7055B1C7DAB1C00034303 /* LessonCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,8 @@
 		B1E7F84E1C75C5360096920B /* MakeURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MakeURL.m; sourceTree = "<group>"; };
 		B1E7F84F1C75C5360096920B /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
 		B1E7F8501C75C5360096920B /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parser.m; sourceTree = "<group>"; };
+		B1F7055A1C7DAB1C00034303 /* LessonCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LessonCategory.h; sourceTree = "<group>"; };
+		B1F7055B1C7DAB1C00034303 /* LessonCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LessonCategory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +154,8 @@
 		64189FF31C73317A0067F895 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B1F7055A1C7DAB1C00034303 /* LessonCategory.h */,
+				B1F7055B1C7DAB1C00034303 /* LessonCategory.m */,
 				B1E7F8461C75C5160096920B /* User.h */,
 				B1E7F8471C75C5160096920B /* User.m */,
 			);
@@ -398,6 +403,7 @@
 				64189FE11C732C950067F895 /* LoginViewController.m in Sources */,
 				B1E7F8481C75C5160096920B /* User.m in Sources */,
 				B1032B041C7C817900D7B269 /* LessonViewController.m in Sources */,
+				B1F7055C1C7DAB1C00034303 /* LessonCategory.m in Sources */,
 				64189FDE1C732C950067F895 /* AppDelegate.m in Sources */,
 				648EC8421C7B112B00D62327 /* LoginManager.m in Sources */,
 				B1E7F8541C75C5360096920B /* Parser.m in Sources */,

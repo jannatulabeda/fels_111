@@ -21,4 +21,8 @@
     return [NSString stringWithFormat:@"%@%@", BASE_URL, SIGN_UP_REQUEST];
 }
 
+// Returns URL string for get categories request
++ (NSString *)getCategoriesURL {
+    return [NSString stringWithFormat:@"%@%@", BASE_URL, GET_CATEGORIES_REQUEST];
+}
 @end
