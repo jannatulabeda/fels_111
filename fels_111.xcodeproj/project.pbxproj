@@ -15,6 +15,9 @@
 		64189FE91C732C960067F895 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64189FE81C732C960067F895 /* Assets.xcassets */; };
 		64189FEC1C732C960067F895 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64189FEA1C732C960067F895 /* LaunchScreen.storyboard */; };
 		64189FFD1C7334270067F895 /* DataValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 64189FFC1C7334270067F895 /* DataValidation.m */; };
+		6485EA571C7D691D00D7A7F9 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6485EA561C7D691D00D7A7F9 /* ProfileViewController.m */; };
+		6485EA5B1C7D71D900D7A7F9 /* learned.png in Resources */ = {isa = PBXBuildFile; fileRef = 6485EA5A1C7D71D900D7A7F9 /* learned.png */; };
+		6485EA5E1C7D766200D7A7F9 /* UpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6485EA5D1C7D766200D7A7F9 /* UpdateViewController.m */; };
 		648D83DF1C76DE7600F543B6 /* name.png in Resources */ = {isa = PBXBuildFile; fileRef = 648D83DE1C76DE7600F543B6 /* name.png */; };
 		648EC8391C7AE54100D62327 /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 648EC8381C7AE54100D62327 /* avatar.png */; };
 		648EC83B1C7AE5BF00D62327 /* icon_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 648EC83A1C7AE5BF00D62327 /* icon_avatar.png */; };
@@ -53,6 +56,11 @@
 		64189FED1C732C960067F895 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64189FFB1C7334270067F895 /* DataValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataValidation.h; sourceTree = "<group>"; };
 		64189FFC1C7334270067F895 /* DataValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataValidation.m; sourceTree = "<group>"; };
+		6485EA551C7D691D00D7A7F9 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		6485EA561C7D691D00D7A7F9 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		6485EA5A1C7D71D900D7A7F9 /* learned.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = learned.png; sourceTree = "<group>"; };
+		6485EA5C1C7D766200D7A7F9 /* UpdateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateViewController.h; sourceTree = "<group>"; };
+		6485EA5D1C7D766200D7A7F9 /* UpdateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateViewController.m; sourceTree = "<group>"; };
 		648D83DE1C76DE7600F543B6 /* name.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = name.png; sourceTree = "<group>"; };
 		648EC8381C7AE54100D62327 /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
 		648EC83A1C7AE5BF00D62327 /* icon_avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_avatar.png; sourceTree = "<group>"; };
@@ -176,6 +184,10 @@
 				B1032B001C7C817900D7B269 /* LessonViewController.m */,
 				B1032B011C7C817900D7B269 /* ResultTableViewController.h */,
 				B1032B021C7C817900D7B269 /* ResultTableViewController.m */,
+				6485EA5C1C7D766200D7A7F9 /* UpdateViewController.h */,
+				6485EA5D1C7D766200D7A7F9 /* UpdateViewController.m */,
+				6485EA551C7D691D00D7A7F9 /* ProfileViewController.h */,
+				6485EA561C7D691D00D7A7F9 /* ProfileViewController.m */,
 				64189FDF1C732C950067F895 /* LoginViewController.h */,
 				64189FE01C732C950067F895 /* LoginViewController.m */,
 				64FF16011C7588FB00AAB7EE /* RegisterViewController.h */,
@@ -207,6 +219,7 @@
 		64AD8A211C743A2E004E4A3C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6485EA5A1C7D71D900D7A7F9 /* learned.png */,
 				648EC83A1C7AE5BF00D62327 /* icon_avatar.png */,
 				648EC8381C7AE54100D62327 /* avatar.png */,
 				648D83DE1C76DE7600F543B6 /* name.png */,
@@ -329,6 +342,7 @@
 				64AD8A2B1C744085004E4A3C /* pass_key.png in Resources */,
 				64189FE91C732C960067F895 /* Assets.xcassets in Resources */,
 				648D83DF1C76DE7600F543B6 /* name.png in Resources */,
+				6485EA5B1C7D71D900D7A7F9 /* learned.png in Resources */,
 				64AD8A291C743FD4004E4A3C /* email_icon.png in Resources */,
 				64189FE41C732C950067F895 /* Main.storyboard in Resources */,
 				64AD8A251C743C10004E4A3C /* unchecked.png in Resources */,
@@ -396,6 +410,7 @@
 				B1032B031C7C817900D7B269 /* CategoryTableViewController.m in Sources */,
 				64FF16031C7588FB00AAB7EE /* RegisterViewController.m in Sources */,
 				64189FE11C732C950067F895 /* LoginViewController.m in Sources */,
+				6485EA5E1C7D766200D7A7F9 /* UpdateViewController.m in Sources */,
 				B1E7F8481C75C5160096920B /* User.m in Sources */,
 				B1032B041C7C817900D7B269 /* LessonViewController.m in Sources */,
 				64189FDE1C732C950067F895 /* AppDelegate.m in Sources */,
@@ -404,6 +419,7 @@
 				64189FDB1C732C950067F895 /* main.m in Sources */,
 				B1E7F8521C75C5360096920B /* MakeParam.m in Sources */,
 				B1032B051C7C817900D7B269 /* ResultTableViewController.m in Sources */,
+				6485EA571C7D691D00D7A7F9 /* ProfileViewController.m in Sources */,
 				64189FFD1C7334270067F895 /* DataValidation.m in Sources */,
 				B1E7F8531C75C5360096920B /* MakeURL.m in Sources */,
 				B1E7F8511C75C5360096920B /* APIHandler.m in Sources */,
