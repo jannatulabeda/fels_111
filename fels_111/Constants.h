@@ -16,6 +16,7 @@ extern NSString *const LOG_IN_REQUEST; //Log in request
 extern NSString *const SIGN_UP_REQUEST; //Sign up request
 
 #pragma mark - KEY constants
+extern NSString *const KEY_ID;
 extern NSString *const KEY_EMAIL;
 extern NSString *const KEY_PASSWORD;
 extern NSString *const KEY_PASSWORD_CONFIRMATION;
@@ -37,5 +38,12 @@ extern NSInteger const MIN_LENGTH_PASSWORD;
 
 extern NSString *const CHECKED_IMAGE;
 extern NSString *const UNCHECKED_IMAGE;
+
+#pragma mark - Error Strings
+extern NSString *const ERROR_EMAIL_REQUIRED;
+extern NSString *const ERROR_EMAIL_INVALID;
+extern NSString *const ERROR_PASSWORD_REQUIRED;
+extern NSString *const ERROR_NAME_REQUIRED;
+extern NSString *const ERROR_INVALID_COMBINATION;
 
 @end

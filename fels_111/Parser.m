@@ -18,7 +18,8 @@
     NSDictionary *logInData = [self parseJSONData:responseData];
     NSDictionary *userInfo = [logInData objectForKey:KEY_USER];
     
-    User *user = [[User alloc]init];
+    User *user = [[User alloc] init];
+    user.userId = [[userInfo objectForKey:KEY_ID] intValue];
     user.name = [userInfo objectForKey:KEY_NAME];
     user.email = [userInfo objectForKey:KEY_EMAIL];
     user.avatar = [userInfo objectForKey:KEY_AVATAR];

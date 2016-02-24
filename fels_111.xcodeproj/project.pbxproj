@@ -18,17 +18,18 @@
 		648D83DF1C76DE7600F543B6 /* name.png in Resources */ = {isa = PBXBuildFile; fileRef = 648D83DE1C76DE7600F543B6 /* name.png */; };
 		648EC8391C7AE54100D62327 /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 648EC8381C7AE54100D62327 /* avatar.png */; };
 		648EC83B1C7AE5BF00D62327 /* icon_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 648EC83A1C7AE5BF00D62327 /* icon_avatar.png */; };
+		648EC8421C7B112B00D62327 /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 648EC8411C7B112B00D62327 /* LoginManager.m */; };
 		64AD8A251C743C10004E4A3C /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 64AD8A231C743C10004E4A3C /* unchecked.png */; };
 		64AD8A271C743CE3004E4A3C /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 64AD8A261C743CE3004E4A3C /* checked.png */; };
 		64AD8A291C743FD4004E4A3C /* email_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 64AD8A281C743FD4004E4A3C /* email_icon.png */; };
 		64AD8A2B1C744085004E4A3C /* pass_key.png in Resources */ = {isa = PBXBuildFile; fileRef = 64AD8A2A1C744085004E4A3C /* pass_key.png */; };
 		64AD8A2E1C7491F9004E4A3C /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 64AD8A2D1C7491F9004E4A3C /* Constants.m */; };
+		64FF16031C7588FB00AAB7EE /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64FF16021C7588FB00AAB7EE /* RegisterViewController.m */; };
 		B1E7F8481C75C5160096920B /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E7F8471C75C5160096920B /* User.m */; };
 		B1E7F8511C75C5360096920B /* APIHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E7F84A1C75C5360096920B /* APIHandler.m */; };
 		B1E7F8521C75C5360096920B /* MakeParam.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E7F84C1C75C5360096920B /* MakeParam.m */; };
 		B1E7F8531C75C5360096920B /* MakeURL.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E7F84E1C75C5360096920B /* MakeURL.m */; };
 		B1E7F8541C75C5360096920B /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E7F8501C75C5360096920B /* Parser.m */; };
-		64FF16031C7588FB00AAB7EE /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64FF16021C7588FB00AAB7EE /* RegisterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,8 @@
 		648D83DE1C76DE7600F543B6 /* name.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = name.png; sourceTree = "<group>"; };
 		648EC8381C7AE54100D62327 /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
 		648EC83A1C7AE5BF00D62327 /* icon_avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_avatar.png; sourceTree = "<group>"; };
+		648EC8401C7B112B00D62327 /* LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginManager.h; sourceTree = "<group>"; };
+		648EC8411C7B112B00D62327 /* LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginManager.m; sourceTree = "<group>"; };
 		64AD8A231C743C10004E4A3C /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked.png; sourceTree = "<group>"; };
 		64AD8A261C743CE3004E4A3C /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked.png; sourceTree = "<group>"; };
 		64AD8A281C743FD4004E4A3C /* email_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email_icon.png; sourceTree = "<group>"; };
@@ -56,6 +59,8 @@
 		64AD8A2C1C7491F9004E4A3C /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		64AD8A2D1C7491F9004E4A3C /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		64BE49D2FC5313C424664432 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		64FF16011C7588FB00AAB7EE /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		64FF16021C7588FB00AAB7EE /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		B1E7F8461C75C5160096920B /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		B1E7F8471C75C5160096920B /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		B1E7F8491C75C5360096920B /* APIHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIHandler.h; sourceTree = "<group>"; };
@@ -66,8 +71,6 @@
 		B1E7F84E1C75C5360096920B /* MakeURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MakeURL.m; sourceTree = "<group>"; };
 		B1E7F84F1C75C5360096920B /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
 		B1E7F8501C75C5360096920B /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parser.m; sourceTree = "<group>"; };
-		64FF16011C7588FB00AAB7EE /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
-		64FF16021C7588FB00AAB7EE /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,7 @@
 		64189FD81C732C950067F895 /* fels_111 */ = {
 			isa = PBXGroup;
 			children = (
+				648EC83C1C7B09B000D62327 /* Manager */,
 				B1E7F8551C75C53E0096920B /* APIHandler */,
 				64AD8A211C743A2E004E4A3C /* Resources */,
 				64189FF61C7332080067F895 /* Utilities */,
@@ -164,6 +168,15 @@
 				64AD8A2D1C7491F9004E4A3C /* Constants.m */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		648EC83C1C7B09B000D62327 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				648EC8401C7B112B00D62327 /* LoginManager.h */,
+				648EC8411C7B112B00D62327 /* LoginManager.m */,
+			);
+			name = Manager;
 			sourceTree = "<group>";
 		};
 		64AD8A211C743A2E004E4A3C /* Resources */ = {
@@ -345,6 +358,7 @@
 				64189FE11C732C950067F895 /* LoginViewController.m in Sources */,
 				B1E7F8481C75C5160096920B /* User.m in Sources */,
 				64189FDE1C732C950067F895 /* AppDelegate.m in Sources */,
+				648EC8421C7B112B00D62327 /* LoginManager.m in Sources */,
 				B1E7F8541C75C5360096920B /* Parser.m in Sources */,
 				64189FDB1C732C950067F895 /* main.m in Sources */,
 				B1E7F8521C75C5360096920B /* MakeParam.m in Sources */,

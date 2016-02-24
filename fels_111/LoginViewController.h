@@ -10,7 +10,15 @@
 
 @interface LoginViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *emailLoginTextField;
+
+@property (weak, nonatomic) IBOutlet UITextField *passwordLoginTextField;
+
+@property (weak, nonatomic) IBOutlet UILabel *loginErrorLabel;
+
 - (IBAction)toggleRememberMeButtonImage:(id)sender;
+
+- (IBAction)signInButtonPressed:(id)sender;
 
 @end
 
