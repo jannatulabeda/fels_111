@@ -64,6 +64,8 @@
     return categoryArray;
 }
 
+// Parse json data response for create lesson request
+// Returns NSArray of words
 - (Lesson *)parseCreateLessonResponse:(id)responseData {
     
     NSDictionary *lessonDict = [[self parseJSONData:responseData] objectForKey:KEY_LESSON];

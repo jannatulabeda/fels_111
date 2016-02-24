@@ -36,6 +36,7 @@
 		B1032B0A1C7C81A500D7B269 /* CategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1032B071C7C81A500D7B269 /* CategoryTableViewCell.m */; };
 		B1032B0B1C7C81A500D7B269 /* ResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1032B091C7C81A500D7B269 /* ResultTableViewCell.m */; };
 		B1891E1B1C7F196400EF27A7 /* CategoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B1891E1A1C7F196400EF27A7 /* CategoryManager.m */; };
+		B153B75B1C7F3EEF0039BF33 /* LessonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B153B75A1C7F3EEF0039BF33 /* LessonManager.m */; };
 		B189888A1C7DE2C700543F50 /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = B18988851C7DE2C700543F50 /* Answer.m */; };
 		B189888B1C7DE2C700543F50 /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = B18988871C7DE2C700543F50 /* Word.m */; };
 		B189888C1C7DE2C700543F50 /* Lesson.m in Sources */ = {isa = PBXBuildFile; fileRef = B18988891C7DE2C700543F50 /* Lesson.m */; };
@@ -96,6 +97,8 @@
 		B1032B091C7C81A500D7B269 /* ResultTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultTableViewCell.m; sourceTree = "<group>"; };
 		B1891E191C7F196400EF27A7 /* CategoryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryManager.h; sourceTree = "<group>"; };
 		B1891E1A1C7F196400EF27A7 /* CategoryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryManager.m; sourceTree = "<group>"; };
+		B153B7591C7F3EEF0039BF33 /* LessonManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LessonManager.h; sourceTree = "<group>"; };
+		B153B75A1C7F3EEF0039BF33 /* LessonManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LessonManager.m; sourceTree = "<group>"; };
 		B18988841C7DE2C700543F50 /* Answer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Answer.h; sourceTree = "<group>"; };
 		B18988851C7DE2C700543F50 /* Answer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Answer.m; sourceTree = "<group>"; };
 		B18988861C7DE2C700543F50 /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
@@ -240,6 +243,8 @@
 			children = (
 				B1891E191C7F196400EF27A7 /* CategoryManager.h */,
 				B1891E1A1C7F196400EF27A7 /* CategoryManager.m */,
+				B153B7591C7F3EEF0039BF33 /* LessonManager.h */,
+				B153B75A1C7F3EEF0039BF33 /* LessonManager.m */,
 				648EC8401C7B112B00D62327 /* LoginManager.h */,
 				648EC8411C7B112B00D62327 /* LoginManager.m */,
 			);
@@ -443,6 +448,7 @@
 				6485EA5E1C7D766200D7A7F9 /* UpdateViewController.m in Sources */,
 				B1E7F8481C75C5160096920B /* User.m in Sources */,
 				B189888C1C7DE2C700543F50 /* Lesson.m in Sources */,
+				B153B75B1C7F3EEF0039BF33 /* LessonManager.m in Sources */,
 				B189888A1C7DE2C700543F50 /* Answer.m in Sources */,
 				B189888B1C7DE2C700543F50 /* Word.m in Sources */,
 				B1032B041C7C817900D7B269 /* LessonViewController.m in Sources */,

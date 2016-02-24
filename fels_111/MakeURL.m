@@ -30,5 +30,5 @@
 + (NSString *)getCreateLessonURLWithCategoryId:(int)categoryId {
     return [NSString stringWithFormat:@"%@/%@/%d%@", BASE_URL, KEY_CATEGORIES, categoryId, LESSONS_REQUEST];
 }
-    
+
 @end
