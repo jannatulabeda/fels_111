@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Category-->
+        <!--Categories-->
         <scene sceneID="qgC-GH-Gut">
             <objects>
-                <tableViewController title="Category" id="gHo-yz-n9X" customClass="CategoryTableViewController" sceneMemberID="viewController">
+                <tableViewController id="gHo-yz-n9X" customClass="CategoryTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="85" sectionHeaderHeight="28" sectionFooterHeight="28" id="7vh-EA-avU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,7 +84,7 @@
                             <outlet property="delegate" destination="gHo-yz-n9X" id="saZ-Vh-7k6"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="OLQ-CY-Jks"/>
+                    <navigationItem key="navigationItem" title="Categories" id="OLQ-CY-Jks"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ig-iy-pZS" userLabel="First Responder" sceneMemberID="firstResponder"/>
