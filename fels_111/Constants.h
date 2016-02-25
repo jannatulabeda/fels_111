@@ -52,4 +52,9 @@ extern NSString *const ERROR_PASSWORD_REQUIRED;
 extern NSString *const ERROR_NAME_REQUIRED;
 extern NSString *const ERROR_INVALID_COMBINATION;
 
+#pragma mark - KeyChain Keys
+extern NSString *const KEYCHAIN_KEY_SERVICE;
+extern NSString *const KEYCHAIN_KEY_TOKEN;
+extern NSString *const KEYCHAIN_KEY_ID;
+
 @end

@@ -52,4 +52,9 @@ NSString *const ERROR_PASSWORD_REQUIRED = @"Password required";
 NSString *const ERROR_NAME_REQUIRED = @"Name required";
 NSString *const ERROR_INVALID_COMBINATION = @"Invalid email/password combination";
 
+#pragma mark - KeyChain Keys
+NSString *const KEYCHAIN_KEY_SERVICE = @"com.framgia.fels-111";
+NSString *const KEYCHAIN_KEY_TOKEN = @"token";
+NSString *const KEYCHAIN_KEY_ID = @"id";
+
 @end

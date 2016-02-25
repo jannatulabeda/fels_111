@@ -12,6 +12,7 @@
 #import "MakeParam.h"
 #import "MakeURL.h"
 #import "Parser.h"
+#import "Utils.h"
 
 @implementation LoginManager
 
@@ -32,7 +33,8 @@
         User *user = [[User alloc] init];
         Parser *parserLogin = [[Parser alloc] init];
         user = [parserLogin parseLoginResponse:response];
-        // KeyChain To Do
+        [Utils setUserToKeyChain:user];
+        completeBlock(YES,@"");
       }
     } fail:^(NSError *error) {
       completeBlock(NO,@"");

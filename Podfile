@@ -6,3 +6,5 @@ pod 'AFNetworking', '~> 3.0'
 pod 'JTProgressHUD’
 
 pod 'SDWebImage', '~>3.7'
+pod 'UICKeyChainStore'
+
