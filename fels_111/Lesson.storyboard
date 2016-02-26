@@ -232,7 +232,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17/200" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHd-yQ-Ioz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHd-yQ-Ioz">
                                 <rect key="frame" x="29" y="77" width="261" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="GoL-Mg-tma"/>
@@ -245,8 +245,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fGv-Z1-Mdv">
                                 <rect key="frame" x="-4" y="157" width="328" height="78"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="こんばんは。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hsp-4z-MJ3">
-                                        <rect key="frame" x="26" y="29" width="240" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hsp-4z-MJ3">
+                                        <rect key="frame" x="26" y="39" width="240" height="0.0"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="Fmb-z3-Koo"/>
                                         </constraints>
@@ -283,39 +283,39 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kN3-kO-7Hk">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kN3-kO-7Hk">
                                 <rect key="frame" x="47" y="300" width="225" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="225" id="cQe-vD-Edl"/>
                                 </constraints>
-                                <state key="normal" title="Day">
+                                <state key="normal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktX-AL-I0r">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktX-AL-I0r">
                                 <rect key="frame" x="47" y="345" width="225" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="225" id="cw7-ib-YWs"/>
                                 </constraints>
-                                <state key="normal" title="Night">
+                                <state key="normal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11w-kL-zJn">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11w-kL-zJn">
                                 <rect key="frame" x="47" y="390" width="225" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="225" id="WJ7-6b-A2R"/>
                                 </constraints>
-                                <state key="normal" title="Light">
+                                <state key="normal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ej-XX-yPG">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ej-XX-yPG">
                                 <rect key="frame" x="48" y="435" width="225" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="225" id="acB-0w-8RA"/>
                                 </constraints>
-                                <state key="normal" title="Dark">
+                                <state key="normal">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -353,6 +353,8 @@
                         <outlet property="answerButton3" destination="11w-kL-zJn" id="Zi6-T7-8Lx"/>
                         <outlet property="answerButton4" destination="0Ej-XX-yPG" id="y4J-1u-9wi"/>
                         <outlet property="contentView" destination="fGv-Z1-Mdv" id="E1H-J5-6qj"/>
+                        <outlet property="wordContentLabel" destination="Hsp-4z-MJ3" id="zqP-vM-i45"/>
+                        <outlet property="wordCountLabel" destination="BHd-yQ-Ioz" id="Ttx-Jy-6Dd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g1B-SW-DsW" userLabel="First Responder" sceneMemberID="firstResponder"/>

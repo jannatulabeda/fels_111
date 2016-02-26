@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LessonCategory.h"
 
 @interface LessonViewController : UIViewController
 
-@property (strong, nonatomic) NSString *pageTitle;
+@property (strong, nonatomic) LessonCategory *category;
 
 @end
