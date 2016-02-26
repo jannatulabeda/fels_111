@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Lesson.h"
 
 @interface ResultTableViewController : UITableViewController
 
+@property (strong, nonatomic) Lesson *lesson;
 @end

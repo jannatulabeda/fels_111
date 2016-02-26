@@ -25,4 +25,6 @@
 // Returns URL string for show user request
 + (NSString *)getShowUserProfileURLWithUserId:(int)userID;
 
+// Returns URL string for update lesson request
++ (NSString *)getUpdateLessonURLWithCategoryId:(int)categoryId;
 @end

@@ -62,4 +62,16 @@
   return param;
 }
 
+// Generate update lesson param for Update Lesson API
+// Return parameter as a dictionary
++ (NSDictionary *)makeUpdateLessonParamWithLearned:(BOOL)learned
+                                  resultAttributes:(NSDictionary *)resultAttribute
+                                         authToken:(NSString *)authToken {
+    NSDictionary *param = @{KEY_LESSON: @{KEY_LEARNED: [NSNumber numberWithBool:learned],
+                                           KEY_RESULT_ATTRIBUTES: resultAttribute,
+                                           KEY_AUTH_TOKEN: authToken
+                                           }
+                            };
+    return param;
+}
 @end
