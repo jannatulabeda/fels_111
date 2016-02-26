@@ -15,6 +15,7 @@ NSString *const BASE_URL = @"https://manh-nt.herokuapp.com"; // Base URL
 NSString *const LOG_IN_REQUEST = @"/login.json"; // Log in request
 NSString *const SIGN_UP_REQUEST = @"/users.json"; // Sign up request
 NSString *const GET_CATEGORIES_REQUEST = @"/categories.json"; // Get categories request
+NSString *const LESSONS_REQUEST = @"/lessons.json"; // Create lesson request
 
 #pragma mark - KEY Constants
 NSString *const KEY_ID = @"id";
@@ -34,6 +35,12 @@ NSString *const KEY_PAGE = @"page";
 NSString *const KEY_PER_PAGE = @"per_page";
 NSString *const KEY_PHOTO = @"photo";
 NSString *const KEY_TOTAL_PAGES = @"total_pages";
+NSString *const KEY_LESSON = @"lesson";
+NSString *const KEY_WORDS = @"words";
+NSString *const KEY_CONTENT = @"content";
+NSString *const KEY_RESULT_ID = @"result_id";
+NSString *const KEY_ANSWERS = @"answers";
+NSString *const KEY_IS_CORRECT = @"is_correct";
 
 #pragma mark - Data validation Constants
 NSInteger const MAX_LENGTH_USER_NAME = 50;

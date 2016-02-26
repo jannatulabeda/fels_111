@@ -25,4 +25,10 @@
 + (NSString *)getCategoriesURL {
     return [NSString stringWithFormat:@"%@%@", BASE_URL, GET_CATEGORIES_REQUEST];
 }
+
+// Returns URL string for create lesson request
++ (NSString *)getCreateLessonURLWithCategoryId:(int)categoryId {
+    return [NSString stringWithFormat:@"%@/%@/%d%@", BASE_URL, KEY_CATEGORIES, categoryId, LESSONS_REQUEST];
+}
+    
 @end

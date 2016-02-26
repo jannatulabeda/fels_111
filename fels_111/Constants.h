@@ -15,6 +15,7 @@ extern NSString *const BASE_URL; // Base URL
 extern NSString *const LOG_IN_REQUEST; //Log in request
 extern NSString *const SIGN_UP_REQUEST; //Sign up request
 extern NSString *const GET_CATEGORIES_REQUEST; // Get categories request
+extern NSString *const LESSONS_REQUEST; // Create lesson request
 
 #pragma mark - KEY constants
 extern NSString *const KEY_ID;
@@ -34,6 +35,12 @@ extern NSString *const KEY_PAGE;
 extern NSString *const KEY_PER_PAGE;
 extern NSString *const KEY_PHOTO;
 extern NSString *const KEY_TOTAL_PAGES;
+extern NSString *const KEY_LESSON;
+extern NSString *const KEY_WORDS;
+extern NSString *const KEY_CONTENT;
+extern NSString *const KEY_RESULT_ID;
+extern NSString *const KEY_ANSWERS;
+extern NSString *const KEY_IS_CORRECT;
 
 #pragma mark - Data validation Constants
 extern NSInteger const MAX_LENGTH_USER_NAME;

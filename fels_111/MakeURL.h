@@ -18,4 +18,8 @@
 
 // Returns URL string for get categories request
 + (NSString *)getCategoriesURL;
+
+// Returns URL string for create lesson request
++ (NSString *)getCreateLessonURLWithCategoryId:(int)categoryId;
+
 @end
