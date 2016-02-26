@@ -9,6 +9,8 @@
 #import "LoginViewController.h"
 #import "Constants.h"
 #import "LoginManager.h"
+#import "Utils.h"
+#import "User.h"
 
 @interface LoginViewController ()
 
@@ -48,7 +50,11 @@
                         if (!isValid) {
                           self.loginErrorLabel.text = ERROR_INVALID_COMBINATION;
                         } else {
-                          self.loginErrorLabel.text = errMessage;
+                          if ([errMessage  isEqualToString:@""]) {
+                            //Proceed to next view controller
+                          } else {
+                            self.loginErrorLabel.text = errMessage;
+                          }
                         }
                       }];
 }

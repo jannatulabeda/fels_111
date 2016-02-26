@@ -18,6 +18,7 @@
 		6485EA571C7D691D00D7A7F9 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6485EA561C7D691D00D7A7F9 /* ProfileViewController.m */; };
 		6485EA5B1C7D71D900D7A7F9 /* learned.png in Resources */ = {isa = PBXBuildFile; fileRef = 6485EA5A1C7D71D900D7A7F9 /* learned.png */; };
 		6485EA5E1C7D766200D7A7F9 /* UpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6485EA5D1C7D766200D7A7F9 /* UpdateViewController.m */; };
+		6485EA621C7DB83800D7A7F9 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6485EA611C7DB83800D7A7F9 /* Utils.m */; };
 		648D83DF1C76DE7600F543B6 /* name.png in Resources */ = {isa = PBXBuildFile; fileRef = 648D83DE1C76DE7600F543B6 /* name.png */; };
 		648EC8391C7AE54100D62327 /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 648EC8381C7AE54100D62327 /* avatar.png */; };
 		648EC83B1C7AE5BF00D62327 /* icon_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 648EC83A1C7AE5BF00D62327 /* icon_avatar.png */; };
@@ -63,6 +64,8 @@
 		6485EA5A1C7D71D900D7A7F9 /* learned.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = learned.png; sourceTree = "<group>"; };
 		6485EA5C1C7D766200D7A7F9 /* UpdateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateViewController.h; sourceTree = "<group>"; };
 		6485EA5D1C7D766200D7A7F9 /* UpdateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateViewController.m; sourceTree = "<group>"; };
+		6485EA601C7DB83800D7A7F9 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		6485EA611C7DB83800D7A7F9 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		648D83DE1C76DE7600F543B6 /* name.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = name.png; sourceTree = "<group>"; };
 		648EC8381C7AE54100D62327 /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
 		648EC83A1C7AE5BF00D62327 /* icon_avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_avatar.png; sourceTree = "<group>"; };
@@ -211,6 +214,8 @@
 				64189FFC1C7334270067F895 /* DataValidation.m */,
 				64AD8A2C1C7491F9004E4A3C /* Constants.h */,
 				64AD8A2D1C7491F9004E4A3C /* Constants.m */,
+				6485EA601C7DB83800D7A7F9 /* Utils.h */,
+				6485EA611C7DB83800D7A7F9 /* Utils.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -425,6 +430,7 @@
 				B1032B041C7C817900D7B269 /* LessonViewController.m in Sources */,
 				B1F7055C1C7DAB1C00034303 /* LessonCategory.m in Sources */,
 				64189FDE1C732C950067F895 /* AppDelegate.m in Sources */,
+				6485EA621C7DB83800D7A7F9 /* Utils.m in Sources */,
 				648EC8421C7B112B00D62327 /* LoginManager.m in Sources */,
 				B1E7F8541C75C5360096920B /* Parser.m in Sources */,
 				B1891E1B1C7F196400EF27A7 /* CategoryManager.m in Sources */,
