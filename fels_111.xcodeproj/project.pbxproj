@@ -34,6 +34,7 @@
 		B1032B051C7C817900D7B269 /* ResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1032B021C7C817900D7B269 /* ResultTableViewController.m */; };
 		B1032B0A1C7C81A500D7B269 /* CategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1032B071C7C81A500D7B269 /* CategoryTableViewCell.m */; };
 		B1032B0B1C7C81A500D7B269 /* ResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1032B091C7C81A500D7B269 /* ResultTableViewCell.m */; };
+		B1891E1B1C7F196400EF27A7 /* CategoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B1891E1A1C7F196400EF27A7 /* CategoryManager.m */; };
 		B1E7F8481C75C5160096920B /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E7F8471C75C5160096920B /* User.m */; };
 		B1E7F8511C75C5360096920B /* APIHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E7F84A1C75C5360096920B /* APIHandler.m */; };
 		B1E7F8521C75C5360096920B /* MakeParam.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E7F84C1C75C5360096920B /* MakeParam.m */; };
@@ -87,6 +88,8 @@
 		B1032B071C7C81A500D7B269 /* CategoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewCell.m; sourceTree = "<group>"; };
 		B1032B081C7C81A500D7B269 /* ResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultTableViewCell.h; sourceTree = "<group>"; };
 		B1032B091C7C81A500D7B269 /* ResultTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultTableViewCell.m; sourceTree = "<group>"; };
+		B1891E191C7F196400EF27A7 /* CategoryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryManager.h; sourceTree = "<group>"; };
+		B1891E1A1C7F196400EF27A7 /* CategoryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryManager.m; sourceTree = "<group>"; };
 		B1E7F8461C75C5160096920B /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		B1E7F8471C75C5160096920B /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		B1E7F8491C75C5360096920B /* APIHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIHandler.h; sourceTree = "<group>"; };
@@ -215,6 +218,8 @@
 		648EC83C1C7B09B000D62327 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				B1891E191C7F196400EF27A7 /* CategoryManager.h */,
+				B1891E1A1C7F196400EF27A7 /* CategoryManager.m */,
 				648EC8401C7B112B00D62327 /* LoginManager.h */,
 				648EC8411C7B112B00D62327 /* LoginManager.m */,
 			);
@@ -422,6 +427,7 @@
 				64189FDE1C732C950067F895 /* AppDelegate.m in Sources */,
 				648EC8421C7B112B00D62327 /* LoginManager.m in Sources */,
 				B1E7F8541C75C5360096920B /* Parser.m in Sources */,
+				B1891E1B1C7F196400EF27A7 /* CategoryManager.m in Sources */,
 				64189FDB1C732C950067F895 /* main.m in Sources */,
 				B1E7F8521C75C5360096920B /* MakeParam.m in Sources */,
 				B1032B051C7C817900D7B269 /* ResultTableViewController.m in Sources */,

@@ -9,8 +9,16 @@
 #import "CategoryTableViewController.h"
 #import "CategoryTableViewCell.h"
 #import "LessonViewController.h"
+#import "CategoryManager.h"
+#import "LessonCategory.h"
+#import "JTProgressHUD.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
-@interface CategoryTableViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface CategoryTableViewController () <UITableViewDataSource, UITableViewDelegate, CategoryDelegate> {
+    
+    int pageNumber; // Page number to send API request
+    int perPageData; // Number of data to load per page
+}
 
 @property (strong, nonatomic) NSMutableArray *categoryArray;
 
@@ -27,10 +35,27 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    // Set title
-    self.title = @"Categories";
-    // Loading dummy data
-    self.categoryArray = [NSMutableArray arrayWithObjects:@"Basic",@"Advance", @"Expert", nil];
+    self.categoryArray = [[NSMutableArray alloc] init];
+    
+    // Initially page number is set to 1
+    pageNumber = 1;
+    
+    // Number of data per page is set to 3 for testing purpose
+    perPageData = 3;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    // Clear category array
+    [self.categoryArray removeAllObjects];
+    
+    // Get Category list
+    [JTProgressHUD show];
+    CategoryManager *categoryManager = [[CategoryManager alloc] init];
+    categoryManager.delegate = self;
+    
+    // Send auth token from stored one [Implement later]
+    [categoryManager doGetCategoriesWithAuthToken:@"" pageNumber:pageNumber perPageData:perPageData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,12 +78,34 @@
     static NSString *categoryCellIdentifier = @"categoryCell";
     CategoryTableViewCell *cell =(CategoryTableViewCell *) [tableView dequeueReusableCellWithIdentifier:categoryCellIdentifier forIndexPath:indexPath];
     
+    // Set category imageView border
+    [cell.categoryImageView setBackgroundColor:[UIColor clearColor]];
+    [[cell.categoryImageView layer] setBorderWidth:0.5];
+    [[cell.categoryImageView layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+    
     // Configure the cell...
-    // Loading with dummy data. Will be changed after API response
-    [cell.categoryImageView setImage: [UIImage imageNamed:@"avatar.png"]];
-    cell.categoryNameLabel.text = [self.categoryArray objectAtIndex:indexPath.row];
-    cell.learnedWordsLabel.text = @"You have learned 22/300";
-    cell.contentLabel.text = @"words, words, words, words, words........";
+    if (indexPath.row <= [self.categoryArray count]) {
+        
+        // Get category object
+        LessonCategory *category = [self.categoryArray objectAtIndex:indexPath.row];
+        
+        // Set category name
+        cell.categoryNameLabel.text = category.categoryName;
+        
+        // Set learned words
+        if (category.learnedWords > 1) {
+            cell.learnedWordsLabel.text = [NSString stringWithFormat:@"You have learned %i words", category.learnedWords];
+        } else {
+            cell.learnedWordsLabel.text = [NSString stringWithFormat:@"You have learned %i word", category.learnedWords];
+        }
+        
+        // [Need to ask] about it
+        cell.contentLabel.text = @""; // No API data found [Need to ask]
+        
+        // Set image
+        [cell.categoryImageView sd_setImageWithURL:[NSURL URLWithString:category.imageURL]
+                                  placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+    }
     
     return cell;
 }
@@ -107,10 +154,23 @@
     // If navigating to LessonViewController
     if ([[segue identifier] isEqualToString:@"toLessonSegue"]) {
         // Will be implemented later
-        NSIndexPath *path = [self.tableView indexPathForSelectedRow];
-        LessonViewController *lessonViewController = [segue destinationViewController];
-        lessonViewController.pageTitle = [self.categoryArray objectAtIndex:path.row];
+        /*
+         NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+         LessonViewController *lessonViewController = [segue destinationViewController];
+         LessonCategory *category = [self.categoryArray objectAtIndex:path.row];
+         lessonViewController.category = category;
+         */
     }
+}
+
+#pragma mark - CategoryManager Delegate
+
+// Receive category data from API response
+- (void)didReceiveCategoryDataWithArray:(NSArray *)categoryArray {
+    
+    [self.categoryArray addObjectsFromArray:categoryArray];
+    [self.tableView reloadData];
+    [JTProgressHUD hide];
 }
 
 @end
