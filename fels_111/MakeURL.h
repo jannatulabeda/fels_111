@@ -16,4 +16,6 @@
 // Returns URL string for sign up request
 + (NSString *) getSignUpURL;
 
+// Returns URL string for get categories request
++ (NSString *)getCategoriesURL;
 @end
