@@ -23,6 +23,10 @@
   // Do any additional setup after loading the view, typically from a nib.
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+  [self clearFieldData];
+}
+
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
@@ -51,11 +55,19 @@
                           self.loginErrorLabel.text = ERROR_INVALID_COMBINATION;
                         } else {
                           if ([errMessage  isEqualToString:@""]) {
-                            //Proceed to next view controller
+                            [self performSegueWithIdentifier:@"ToProfile" sender:self];
+                            [self clearFieldData];
                           } else {
                             self.loginErrorLabel.text = errMessage;
                           }
                         }
                       }];
 }
+
+- (void)clearFieldData {
+  self.emailLoginTextField.text = @"";
+  self.passwordLoginTextField.text = @"";
+  self.loginErrorLabel.text = @"";
+}
+
 @end

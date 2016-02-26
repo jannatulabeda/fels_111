@@ -30,6 +30,23 @@
     return user;
 }
 
+//Parse json data response for show user request
+// Returns User information
+- (User *)parseShowUserResponse:(id)responseData {
+  
+  NSDictionary *showUserData = [self parseJSONData:responseData];
+  NSDictionary *userInfo = [showUserData objectForKey:KEY_USER];
+  
+  User *user = [[User alloc] init];
+  user.userId = [[userInfo objectForKey:KEY_ID] intValue];
+  user.name = [userInfo objectForKey:KEY_NAME];
+  user.email = [userInfo objectForKey:KEY_EMAIL];
+  user.learnedWords = [[userInfo objectForKey:KEY_LEARNED_WORDS] intValue];
+  user.activities = [userInfo objectForKey:KEY_ACTIVITIES];
+  
+  return user;
+}
+
 // Parse json data response for sign up request
 // Returns success message
 - (NSString *)parseSignUpResponse:(id)responseData{

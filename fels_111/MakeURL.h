@@ -22,4 +22,7 @@
 // Returns URL string for create lesson request
 + (NSString *)getCreateLessonURLWithCategoryId:(int)categoryId;
 
+// Returns URL string for show user request
++ (NSString *)getShowUserProfileURLWithUserId:(int)userID;
+
 @end

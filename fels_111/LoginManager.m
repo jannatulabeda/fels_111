@@ -13,6 +13,7 @@
 #import "MakeURL.h"
 #import "Parser.h"
 #import "Utils.h"
+#import "JTProgressHUD.h"
 
 @implementation LoginManager
 
@@ -27,13 +28,14 @@
     NSDictionary *paramLogin = [[NSDictionary alloc]
                                 initWithDictionary:[MakeParam makeLoginParamWithEmail:email password:password rememberMe:rememberMe]];
     NSString *urlLogin = [[NSString alloc] initWithString:[MakeURL getLogInURL]];
-    
+    [JTProgressHUD show];
     [APIHandler postWithUrl:urlLogin params:paramLogin success:^(id response) {
       if (response != nil) {
         User *user = [[User alloc] init];
         Parser *parserLogin = [[Parser alloc] init];
         user = [parserLogin parseLoginResponse:response];
         [Utils setUserToKeyChain:user];
+        [JTProgressHUD hide];
         completeBlock(YES,@"");
       }
     } fail:^(NSError *error) {

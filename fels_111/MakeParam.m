@@ -55,4 +55,11 @@
     return param;
 }
 
+// Makes show user param for Show User API
+// return param as a dictionary
++ (NSDictionary *)makeShowUserParamWithAuthToken:(NSString *)authToken {
+  NSDictionary *param = @{KEY_AUTH_TOKEN : authToken};
+  return param;
+}
+
 @end

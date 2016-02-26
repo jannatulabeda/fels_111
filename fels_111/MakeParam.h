@@ -33,4 +33,8 @@
 // Generate create lesson param for Create Lesson API
 // Return parameter as a dictionary
 + (NSDictionary *)makeCreateLessonParamWithAuthToken:(NSString *)authToken;
+
+// Makes show user param for Show User API
+// return param as a dictionary
++ (NSDictionary *)makeShowUserParamWithAuthToken:(NSString *)authToken;
 @end
