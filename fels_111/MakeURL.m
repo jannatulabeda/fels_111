@@ -31,4 +31,9 @@
     return [NSString stringWithFormat:@"%@/%@/%d%@", BASE_URL, KEY_CATEGORIES, categoryId, LESSONS_REQUEST];
 }
 
+// Returns URL string for show user request
++ (NSString *)getShowUserProfileURLWithUserId:(int)userID {
+  return [NSString stringWithFormat:@"%@/%@/%d%@", BASE_URL, KEY_USERS, userID, REQUEST_EXTENSION];
+}
+
 @end

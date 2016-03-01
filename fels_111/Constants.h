@@ -16,6 +16,7 @@ extern NSString *const LOG_IN_REQUEST; //Log in request
 extern NSString *const SIGN_UP_REQUEST; //Sign up request
 extern NSString *const GET_CATEGORIES_REQUEST; // Get categories request
 extern NSString *const LESSONS_REQUEST; // Create lesson request
+extern NSString *const REQUEST_EXTENSION;
 
 #pragma mark - KEY constants
 extern NSString *const KEY_ID;
@@ -41,14 +42,16 @@ extern NSString *const KEY_CONTENT;
 extern NSString *const KEY_RESULT_ID;
 extern NSString *const KEY_ANSWERS;
 extern NSString *const KEY_IS_CORRECT;
+extern NSString *const KEY_USERS;
+extern NSString *const KEY_ACTIVITIES;
+extern NSString *const KEY_CONTENT;
 
 #pragma mark - Data validation Constants
 extern NSInteger const MAX_LENGTH_USER_NAME;
 extern NSInteger const MAX_LENGTH_EMAIL;
 extern NSInteger const MIN_LENGTH_PASSWORD;
 
-#pragma mark - resources 
-
+#pragma mark - resources
 extern NSString *const CHECKED_IMAGE;
 extern NSString *const UNCHECKED_IMAGE;
 
@@ -63,5 +66,12 @@ extern NSString *const ERROR_INVALID_COMBINATION;
 extern NSString *const KEYCHAIN_KEY_SERVICE;
 extern NSString *const KEYCHAIN_KEY_TOKEN;
 extern NSString *const KEYCHAIN_KEY_ID;
+
+#pragma mark - String Literals
+extern NSString *const LEARNED;
+extern NSString *const WORDS;
+
+#pragma mark - Segue Identifiers
+extern NSString *const TO_LOGIN;
 
 @end

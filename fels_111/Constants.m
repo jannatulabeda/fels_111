@@ -16,6 +16,7 @@ NSString *const LOG_IN_REQUEST = @"/login.json"; // Log in request
 NSString *const SIGN_UP_REQUEST = @"/users.json"; // Sign up request
 NSString *const GET_CATEGORIES_REQUEST = @"/categories.json"; // Get categories request
 NSString *const LESSONS_REQUEST = @"/lessons.json"; // Create lesson request
+NSString *const REQUEST_EXTENSION = @".json";
 
 #pragma mark - KEY Constants
 NSString *const KEY_ID = @"id";
@@ -41,6 +42,8 @@ NSString *const KEY_CONTENT = @"content";
 NSString *const KEY_RESULT_ID = @"result_id";
 NSString *const KEY_ANSWERS = @"answers";
 NSString *const KEY_IS_CORRECT = @"is_correct";
+NSString *const KEY_USERS = @"users";
+NSString *const KEY_ACTIVITIES = @"activities";
 
 #pragma mark - Data validation Constants
 NSInteger const MAX_LENGTH_USER_NAME = 50;
@@ -63,5 +66,12 @@ NSString *const ERROR_INVALID_COMBINATION = @"Invalid email/password combination
 NSString *const KEYCHAIN_KEY_SERVICE = @"com.framgia.fels-111";
 NSString *const KEYCHAIN_KEY_TOKEN = @"token";
 NSString *const KEYCHAIN_KEY_ID = @"id";
+
+#pragma mark - String Literals
+NSString *const LEARNED = @"Learned";
+NSString *const WORDS = @"words";
+
+#pragma mark - Segue Identifiers
+NSString *const TO_LOGIN = @"ToLogin";
 
 @end
