@@ -35,6 +35,16 @@
   [chain setString:user.email forKey:KEYCHAIN_KEY_EMAIL];
 }
 
++ (void)setRememberMeToKeychain:(BOOL)rememberMe {
+  UICKeyChainStore *chain = [self initTheKeyChain];
+  [chain setString:(rememberMe ? @"YES" : @"NO") forKey:KEYCHAIN_KEY_REMEMBERED];
+}
+
++ (BOOL)getRemeberMeToKeychain {
+  UICKeyChainStore *chain = [self initTheKeyChain];
+  return chain[KEYCHAIN_KEY_REMEMBERED].boolValue;
+}
+
 + (UICKeyChainStore *)initTheKeyChain {
   UICKeyChainStore *keychain = [UICKeyChainStore keyChainStoreWithService:KEYCHAIN_KEY_SERVICE];
   return keychain;
@@ -61,5 +71,6 @@
   [chain removeItemForKey:KEYCHAIN_KEY_ID];
   [chain removeItemForKey:KEYCHAIN_KEY_NAME];
   [chain removeItemForKey:KEYCHAIN_KEY_EMAIL];
+  [chain removeItemForKey:KEYCHAIN_KEY_REMEMBERED];
 }
 @end

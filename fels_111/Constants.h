@@ -76,6 +76,7 @@ extern NSString *const KEYCHAIN_KEY_TOKEN;
 extern NSString *const KEYCHAIN_KEY_ID;
 extern NSString *const KEYCHAIN_KEY_NAME;
 extern NSString *const KEYCHAIN_KEY_EMAIL;
+extern NSString *const KEYCHAIN_KEY_REMEMBERED;
 
 #pragma mark - String Literals
 extern NSString *const LEARNED;
@@ -84,5 +85,6 @@ extern NSString *const WORDS;
 #pragma mark - Segue Identifiers
 extern NSString *const TO_LOGIN;
 extern NSString *const TO_PROFILE_FROM_REGISTER;
+extern NSString *const TO_PROFILE;
 
 @end

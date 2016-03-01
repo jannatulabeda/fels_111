@@ -11,10 +11,9 @@
 @interface LoginViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *emailLoginTextField;
-
 @property (weak, nonatomic) IBOutlet UITextField *passwordLoginTextField;
-
 @property (weak, nonatomic) IBOutlet UILabel *loginErrorLabel;
+@property (assign, nonatomic) BOOL rememberMeChecked;
 
 - (IBAction)toggleRememberMeButtonImage:(id)sender;
 
