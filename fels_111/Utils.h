@@ -10,9 +10,15 @@
 #import "UICKeyChainStore.h"
 #import "User.h"
 #import "Constants.h"
+#import <UIKit/UIKit.h>
 
 @interface Utils : NSObject
 
 + (User *)getUserFromKeychain;
 + (void)setUserToKeyChain:(User *)user;
+
+// Show error message with UIAlertController
++ (void)showErrorMessageWithTitle:(NSString *)title
+                          message:(NSString *)message
+                   viewController:(UIViewController *)viewController;
 @end

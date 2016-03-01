@@ -16,7 +16,6 @@
                            password:(NSString *)password
                          rememberMe:(BOOL)rememberMe;
 
-
 // Generate sign up param for Sign up API
 // Return parameter as a dictionary
 + (NSDictionary *)makeSingUpParamWithName:(NSString *)name
@@ -37,6 +36,7 @@
 // Makes show user param for Show User API
 // return param as a dictionary
 + (NSDictionary *)makeShowUserParamWithAuthToken:(NSString *)authToken;
+
 // Generate update lesson param for Update Lesson API
 // Return parameter as a dictionary
 + (NSDictionary *)makeUpdateLessonParamWithLearned:(BOOL)learned

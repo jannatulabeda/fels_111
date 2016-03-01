@@ -29,4 +29,18 @@
   return keychain;
 }
 
+// Show error message with UIAlertController
++ (void)showErrorMessageWithTitle:(NSString *)title
+                          message:(NSString *)message
+                   viewController:(UIViewController *)viewController {
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title
+                                                                             message:message
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    [alertController addAction:ok];
+    
+    [viewController presentViewController:alertController animated:YES completion:nil];
+}
 @end
