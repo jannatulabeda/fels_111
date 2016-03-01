@@ -80,4 +80,28 @@
     }];
 }
 
+/**
+ * Do patch request
+ *
+ * @param url patch request url
+ * @param params Parameters needed for get request
+ * @param success Success block for receiving success response
+ * @param fail fail block for receiving failure response
+ */
++ (void)patchWithUrl:(NSString *)url
+              params:(NSDictionary *)params
+             success:(ResponseSuccess)success
+                fail:(ResponseFail)fail {
+    // Get session manager
+    AFHTTPSessionManager *manager = [self manager];
+    
+    // Make patch request
+    [manager PATCH:url parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        success(responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (fail) {
+            fail(error);
+        }
+    }];
+}
 @end

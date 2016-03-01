@@ -36,4 +36,8 @@
   return [NSString stringWithFormat:@"%@/%@/%d%@", BASE_URL, KEY_USERS, userID, REQUEST_EXTENSION];
 }
 
+// Returns URL string for create lesson request
++ (NSString *)getUpdateLessonURLWithCategoryId:(int)categoryId {
+    return [NSString stringWithFormat:@"%@/%@/%d%@", BASE_URL, KEY_LESSONS, categoryId, REQUEST_EXTENSION];
+}
 @end

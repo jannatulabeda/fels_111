@@ -13,15 +13,15 @@
 #import "LessonCategory.h"
 #import "JTProgressHUD.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "User.h"
+#import "Utils.h"
 
 @interface CategoryTableViewController () <UITableViewDataSource, UITableViewDelegate, CategoryDelegate> {
-    
     int pageNumber; // Page number to send API request
     int perPageData; // Number of data to load per page
 }
 
 @property (strong, nonatomic) NSMutableArray *categoryArray;
-
 @end
 
 @implementation CategoryTableViewController
@@ -29,23 +29,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
     self.categoryArray = [[NSMutableArray alloc] init];
-    
     // Initially page number is set to 1
     pageNumber = 1;
-    
     // Number of data per page is set to 3 for testing purpose
     perPageData = 3;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    
     // Clear category array
     [self.categoryArray removeAllObjects];
     
@@ -54,8 +45,9 @@
     CategoryManager *categoryManager = [[CategoryManager alloc] init];
     categoryManager.delegate = self;
     
-    // Send auth token from stored one [Implement later]
-    [categoryManager doGetCategoriesWithAuthToken:@"" pageNumber:pageNumber perPageData:perPageData];
+    // Send request for category list
+    User *user = [Utils getUserFromKeychain];
+    [categoryManager doGetCategoriesWithAuthToken:user.authToken pageNumber:pageNumber perPageData:perPageData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,7 +66,6 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     static NSString *categoryCellIdentifier = @"categoryCell";
     CategoryTableViewCell *cell =(CategoryTableViewCell *) [tableView dequeueReusableCellWithIdentifier:categoryCellIdentifier forIndexPath:indexPath];
     
@@ -106,7 +97,6 @@
         [cell.categoryImageView sd_setImageWithURL:[NSURL URLWithString:category.imageURL]
                                   placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
     }
-    
     return cell;
 }
 
@@ -145,26 +135,18 @@
  */
 
 #pragma mark - Navigation
-
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    
     // If navigating to LessonViewController
     if ([[segue identifier] isEqualToString:@"toLessonSegue"]) {
-        // Will be implemented later
-        /*
-         NSIndexPath *path = [self.tableView indexPathForSelectedRow];
-         LessonViewController *lessonViewController = [segue destinationViewController];
-         LessonCategory *category = [self.categoryArray objectAtIndex:path.row];
-         lessonViewController.category = category;
-         */
+        NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+        LessonViewController *lessonViewController = [segue destinationViewController];
+        LessonCategory *category = [self.categoryArray objectAtIndex:path.row];
+        lessonViewController.category = category;
     }
 }
 
 #pragma mark - CategoryManager Delegate
-
 // Receive category data from API response
 - (void)didReceiveCategoryDataWithArray:(NSArray *)categoryArray {
     

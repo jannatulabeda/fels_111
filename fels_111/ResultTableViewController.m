@@ -8,12 +8,13 @@
 
 #import "ResultTableViewController.h"
 #import "ResultTableViewCell.h"
+#import "Word.h"
+#import "Answer.h"
 
 @interface ResultTableViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *lessonNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *learnedWordsLabel;
-
 @property (strong, nonatomic) NSMutableArray *resultArray;
 @end
 
@@ -21,15 +22,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    // Load dummy data
-    self.resultArray = [NSMutableArray arrayWithObjects:@"ありがとう",@"ありがとう",@"ありがとう",@"ありがとう", nil];
+    self.resultArray = [self getResultArray];
+    self.lessonNameLabel.text = self.lesson.lessonName;
+    self.learnedWordsLabel.text = [NSString stringWithFormat:@"%lu/%lu",(unsigned long)[self.resultArray count], (unsigned long)[self.lesson.wordsArray count]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,14 +42,13 @@
     return [self.resultArray count];
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ResultTableViewCell *cell = (ResultTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"resultCell" forIndexPath:indexPath];
-    
     // Configure the cell...
     cell.resultImageView.image = [UIImage imageNamed:@"avatar.png"];
-    cell.contentLabel.text = [self.resultArray objectAtIndex:indexPath.row];
-    cell.resultLabel.text = @"English";
+    Word *word = [self.resultArray objectAtIndex:indexPath.row];
+    cell.contentLabel.text = word.wordContent;
+    cell.resultLabel.text = word.answered.answerContent;
     return cell;
 }
 
@@ -102,4 +96,13 @@
  }
  */
 
+- (NSMutableArray *)getResultArray {
+    NSMutableArray *learnedWordArray = [[NSMutableArray alloc]init];
+    for (Word *word in [self.lesson wordsArray]) {
+        if(word.answered) {
+            [learnedWordArray addObject:word];
+        }
+    }
+    return learnedWordArray;
+}
 @end

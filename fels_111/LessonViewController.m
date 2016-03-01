@@ -12,6 +12,8 @@
 #import "LessonManager.h"
 #import "Answer.h"
 #import "JTProgressHUD.h"
+#import "Utils.h"
+#import "User.h"
 
 @interface LessonViewController () <LessonDelegate>
 
@@ -22,7 +24,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *answerButton4;
 @property (weak, nonatomic) IBOutlet UILabel *wordCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *wordContentLabel;
-
 @property (strong, nonatomic) Lesson *lesson;
 @property (strong, nonatomic) NSMutableArray *wordsArray;
 @end
@@ -32,7 +33,6 @@
 }
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     
     // Do any additional setup after loading the view.
@@ -40,12 +40,12 @@
     [self setContentView];
     [self setButtonsUI];
     
+    // Send request for create lesson
     [JTProgressHUD show];
     LessonManager *lessonManager = [[LessonManager alloc] init];
     lessonManager.delegate = self;
-    
-    // Authentication token will be added later
-    [lessonManager doGetLessonWithCategoryId:_category.categoryId authToken:@""];
+    User *user = [Utils getUserFromKeychain];
+    [lessonManager doGetLessonWithCategoryId:_category.categoryId authToken:user.authToken];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,90 +59,72 @@
     [[self.contentView layer] setBorderColor:[UIColor blackColor].CGColor];
 }
 
-// Set Button
+// Set Buttons UI
 - (void)setButtonsUI {
-    
     // Set buttons border
     [[self.answerButton1 layer] setBorderWidth:1.0f];
     [[self.answerButton1 layer] setBorderColor:[UIColor blackColor].CGColor];
-    
     [[self.answerButton2 layer] setBorderWidth:1.0f];
     [[self.answerButton2 layer] setBorderColor:[UIColor blackColor].CGColor];
-    
     [[self.answerButton3 layer] setBorderWidth:1.0f];
     [[self.answerButton3 layer] setBorderColor:[UIColor blackColor].CGColor];
-    
     [[self.answerButton4 layer] setBorderWidth:1.0f];
     [[self.answerButton4 layer] setBorderColor:[UIColor blackColor].CGColor];
 }
 
 // Load question and answer in the UI
 - (void)loadNextQuestionAndAnswers {
-    
+    if (countWord >= [self.wordsArray count]) {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Lesson finished"
+                                                                                 message:@"Please press done to see the result"
+                                                                          preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+        [alertController addAction:ok];
+        [self presentViewController:alertController animated:YES completion:nil];
+        return;
+    }
     countWord ++;
     [self.wordCountLabel setText:[NSString stringWithFormat:@"%i/%lu", countWord, (unsigned long)[self.wordsArray count]]];
-    
+    // Set word content
     Word *word = [self.wordsArray objectAtIndex:countWord-1];
     self.wordContentLabel.text = word.wordContent;
     
+    // Set answers in the buttons
     Answer *answer = [word.answersArray objectAtIndex:0];
     [self.answerButton1 setTitle:answer.answerContent forState:UIControlStateNormal];
-    
     answer = [word.answersArray objectAtIndex:1];
     [self.answerButton2 setTitle:answer.answerContent forState:UIControlStateNormal];
-    
     answer = [word.answersArray objectAtIndex:2];
     [self.answerButton3 setTitle:answer.answerContent forState:UIControlStateNormal];
-    
     answer = [word.answersArray objectAtIndex:3];
     [self.answerButton4 setTitle:answer.answerContent forState:UIControlStateNormal];
 }
 
 #pragma mark - Button action
 - (IBAction)answerButtonPressed:(id)sender {
-    
     UIButton *button = (UIButton *)sender;
     Word *word = [self.wordsArray objectAtIndex:countWord-1];
-    
+    // Update word object with answer and correctly answered bool value
     word.answered = [word.answersArray objectAtIndex:button.tag - 1];
     word.isCorrectlyAnswered = word.answered.isCorrect ? YES : NO;
-    
     [self.wordsArray replaceObjectAtIndex:countWord-1 withObject:word];
-    
-    if(countWord < [self.wordsArray count]) {
-        [self loadNextQuestionAndAnswers];
-    }
-    
-    if (countWord == [self.wordsArray count]) {
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Lesson finished"
-                                                                                 message:@"Please press done to see the result"
-                                                                          preferredStyle:UIAlertControllerStyleAlert];
-        
-        UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
-        [alertController addAction:ok];
-        [self presentViewController:alertController animated:YES completion:nil];
-    }
+    // Load next word and answers
+    [self loadNextQuestionAndAnswers];
 }
-
 
 #pragma mark - Navigation
-
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    
     // If navigating to LessonViewController
     if ([[segue identifier] isEqualToString:@"toResultSegue"]) {
-        // Generate result
+        // Send result to result page
+        ResultTableViewController *resultTableViewController = [segue destinationViewController];
+        resultTableViewController.lesson = self.lesson;
     }
 }
 
-
 #pragma mark - LessonDelegate
-
 - (void)didReceiveLessonObject:(Lesson *)lesson {
-    
     [JTProgressHUD hide];
     self.lesson = lesson;
     self.wordsArray = lesson.wordsArray;
