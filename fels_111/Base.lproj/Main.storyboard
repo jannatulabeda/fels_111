@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="g4Z-ce-WyU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -385,7 +385,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="registerEmailTextField" destination="hzH-Ia-xqg" id="qRU-Xh-ZG9"/>
+                        <outlet property="registerNameTextField" destination="g99-Zf-QaV" id="RkT-J3-S0A"/>
+                        <outlet property="registerPasswordTextField" destination="pXb-m4-VnC" id="4ss-Jn-hit"/>
+                        <outlet property="registerReTypePasswordTextField" destination="eDs-mW-eua" id="MB9-Ff-JNC"/>
                         <outlet property="registerScrollView" destination="Jkx-yX-cTS" id="hfS-jJ-F4S"/>
+                        <outlet property="registerUserInfoLabel" destination="RO5-rG-Vgq" id="PE2-mV-pKP"/>
+                        <segue destination="g4Z-ce-WyU" kind="show" identifier="ToProfileFromRegister" id="9g6-MC-JZh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7zj-DQ-4hX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -609,7 +615,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l2G-Wf-cqr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="591" y="951"/>
+            <point key="canvasLocation" x="615" y="1113"/>
         </scene>
         <!--Word-->
         <scene sceneID="ic2-yd-yMy">
@@ -900,4 +906,7 @@
         <image name="pass_key.png" width="40" height="36"/>
         <image name="unchecked.png" width="27" height="27"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="9g6-MC-JZh"/>
+    </inferredMetricsTieBreakers>
 </document>

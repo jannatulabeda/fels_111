@@ -20,7 +20,7 @@
 + (void)doSignInWithEmail:(NSString *)email
                  password:(NSString *)password
                  remember:(BOOL)rememberMe
-          errorMessage:(void(^)(BOOL isValid, NSString *errMessage))completeBlock{
+             errorMessage:(void(^)(BOOL isValid, NSString *errMessage))completeBlock{
   NSString *errorMessage = @"";
   [self checkLoginInformationWithEmail:email password:password errorMessage:&errorMessage];
   
@@ -39,6 +39,7 @@
         completeBlock(YES,@"");
       }
     } fail:^(NSError *error) {
+      [JTProgressHUD hide];
       completeBlock(NO,@"");
     }];
   } else {
@@ -47,7 +48,7 @@
 }
 
 + (BOOL)checkLoginInformationWithEmail:(NSString *)email
-                               password:(NSString *)password errorMessage:(NSString **)errorMessage
+                              password:(NSString *)password errorMessage:(NSString **)errorMessage
 {
   // Check if email address is correct
   if (![DataValidation isValidEmailAddress:email errorMessage:errorMessage]) {
