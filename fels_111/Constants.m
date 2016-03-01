@@ -48,6 +48,10 @@ NSString *const KEY_LEARNED = @"learned";
 NSString *const KEY_RESULT_ATTRIBUTES = @"results_attributes";
 NSString *const KEY_LESSONS = @"lessons";
 NSString *const KEY_ANSWER_ID = @"answer_id";
+NSString *const KEY_CATEGORY_ID = @"category_id";
+NSString *const KEY_OPTION = @"option";
+NSString *const KEY_ALL_WORD = @"all_word";
+NSString *const KEY_NO_LEARN = @"no_learn";
 
 #pragma mark - Data validation Constants
 NSInteger const MAX_LENGTH_USER_NAME = 50;

@@ -42,4 +42,12 @@
 + (NSDictionary *)makeUpdateLessonParamWithLearned:(BOOL)learned
                                   resultAttributes:(NSDictionary *)resultAttribute
                                          authToken:(NSString *)authToken;
+
+// Generate word list param for Word List API
+// Return parameter as a dictionary
++ (NSDictionary *)makeWordListParamWithCategoryId:(int)categoryId
+                                           option:(NSString *)option
+                                             page:(int)page
+                                          perPageData:(int)perPage
+                                         authToken:(NSString *)authToken;
 @end

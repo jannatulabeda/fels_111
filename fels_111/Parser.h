@@ -29,8 +29,11 @@
 // Returns NSArray of words
 - (Lesson *)parseCreateLessonResponse:(id)responseData;
 
-//Parse json data response for show user request
+// Parse json data response for show user request
 // Returns User information
 - (User *)parseShowUserResponse:(id)responseData;
 
+// Parse json data response for word list request
+// Returns words array 
+- (NSArray *)parseWordListResponse:(id)responseData;
 @end
