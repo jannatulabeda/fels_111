@@ -29,7 +29,7 @@
         NSArray *array = [parser parseGetCategoriesResponse:response];
         [self.delegate didReceiveCategoryDataWithArray:array];
     } fail:^(NSError *error) {
-        
+        [self.delegate didReceiveCategoryDataWithArray:nil];
     }];
 }
 

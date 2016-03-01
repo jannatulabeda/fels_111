@@ -26,7 +26,7 @@
 + (NSString *)getShowUserProfileURLWithUserId:(int)userID;
 
 // Returns URL string for update lesson request
-+ (NSString *)getUpdateLessonURLWithCategoryId:(int)categoryId;
++ (NSString *)getUpdateLessonURLWithLessonId:(int)lessonId;
 
 // Returns URL string for word list request
 + (NSString *)getWordListURL;

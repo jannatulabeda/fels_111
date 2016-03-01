@@ -12,6 +12,7 @@
 @protocol LessonDelegate <NSObject>
 
 - (void)didReceiveLessonObject:(Lesson *)lesson;
+- (void)didReceiveUpdateLessonResponseWithBool:(BOOL)isSuccess;
 
 @end
 
@@ -20,5 +21,8 @@
 @property (weak, nonatomic) id<LessonDelegate> delegate;
 
 - (void)doGetLessonWithCategoryId:(int)categoryId authToken:(NSString *)authToken;
-
+- (void)doUpdateLessonWithAuthToken:(NSString *)authToken
+                         lessonId:(int)lessonId
+                           resutlId:(int)resultId
+                           answerId:(int)answerId;
 @end

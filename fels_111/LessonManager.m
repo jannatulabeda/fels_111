@@ -11,6 +11,7 @@
 #import "MakeParam.h"
 #import "APIHandler.h"
 #import "Parser.h"
+#import "Constants.h"
 
 @implementation LessonManager
 
@@ -23,6 +24,25 @@
         [_delegate didReceiveLessonObject:lesson];
     } fail:^(NSError *error) {
     }];
+}
+
+- (void)doUpdateLessonWithAuthToken:(NSString *)authToken
+                         lessonId:(int)lessonId
+                           resutlId:(int)resultId
+                           answerId:(int)answerId {
+    NSString *updateLessonURL = [MakeURL getUpdateLessonURLWithLessonId:lessonId];
+    NSDictionary *resultAttributes = @{KEY_ID: [NSNumber numberWithInt:resultId],
+                                       KEY_ANSWER_ID: [NSNumber numberWithInt:answerId]};
+    NSDictionary *param = [MakeParam makeUpdateLessonParamWithLearned:YES
+                                                     resultAttributes:resultAttributes
+                                                            authToken:authToken];
+    [APIHandler patchWithUrl:updateLessonURL
+                      params:param
+                     success:^(id response) {
+                         [self.delegate didReceiveUpdateLessonResponseWithBool:YES];
+                     } fail:^(NSError *error) {
+                         [self.delegate didReceiveUpdateLessonResponseWithBool:YES];
+                     }];
 }
 
 @end

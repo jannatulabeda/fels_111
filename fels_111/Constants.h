@@ -62,6 +62,8 @@ extern NSInteger const MIN_LENGTH_PASSWORD;
 #pragma mark - resources
 extern NSString *const CHECKED_IMAGE;
 extern NSString *const UNCHECKED_IMAGE;
+extern NSString *const RIGHT_SIGN_IMAGE;
+extern NSString *const CROSS_SIGN_IMAGE;
 
 #pragma mark - Error Strings
 extern NSString *const ERROR_EMAIL_REQUIRED;
@@ -86,5 +88,8 @@ extern NSString *const WORDS;
 extern NSString *const TO_LOGIN;
 extern NSString *const TO_PROFILE_FROM_REGISTER;
 extern NSString *const TO_PROFILE;
+
+#pragma mark - Constant values 
+extern int const PER_PAGE_DATA;
 
 @end

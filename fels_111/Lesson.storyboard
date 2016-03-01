@@ -207,8 +207,14 @@
                             <outlet property="delegate" destination="xAI-zB-53e" id="kqc-zK-TZn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Result" id="yNs-Ma-5Dt">
-                        <barButtonItem key="rightBarButtonItem" title="Ok" id="9Tv-J2-7rj"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Result" id="v2h-cX-v5b">
+                        <barButtonItem key="rightBarButtonItem" title="Ok" id="VYo-W9-8Xn">
+                            <connections>
+                                <action selector="OkButtonPressed:" destination="xAI-zB-53e" id="4M0-1h-bZC"/>
+                                <segue destination="Qea-0S-S0n" kind="unwind" unwindAction="prepareForUnwind:" id="fdn-FR-JqL"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -217,6 +223,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s06-48-qse" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Qea-0S-S0n" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="837" y="-2068"/>
         </scene>
@@ -264,6 +271,9 @@
                                         <state key="normal" title="&gt;">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="nextButtonPressed:" destination="zlT-yf-4SM" eventType="touchUpInside" id="Pjb-XO-E9z"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -337,15 +347,15 @@
                             <constraint firstItem="0Ej-XX-yPG" firstAttribute="top" secondItem="11w-kL-zJn" secondAttribute="bottom" constant="15" id="2mk-dQ-0Pw"/>
                             <constraint firstItem="ktX-AL-I0r" firstAttribute="centerX" secondItem="Cx3-1j-5Yk" secondAttribute="centerX" id="7Xr-Rg-g18"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fGv-Z1-Mdv" secondAttribute="trailing" constant="-20" id="Mbq-jy-jVm"/>
-                            <constraint firstItem="fGv-Z1-Mdv" firstAttribute="top" secondItem="Nr6-zx-3Kh" secondAttribute="bottom" constant="93" id="NBl-wB-tNc"/>
+                            <constraint firstItem="BHd-yQ-Ioz" firstAttribute="top" secondItem="Nr6-zx-3Kh" secondAttribute="bottom" constant="13" id="PGg-Yy-Bfy"/>
                             <constraint firstItem="kN3-kO-7Hk" firstAttribute="top" secondItem="fGv-Z1-Mdv" secondAttribute="bottom" constant="65" id="Pd7-hC-rja"/>
                             <constraint firstItem="11w-kL-zJn" firstAttribute="centerX" secondItem="Cx3-1j-5Yk" secondAttribute="centerX" id="btf-Jv-mws"/>
                             <constraint firstItem="11w-kL-zJn" firstAttribute="top" secondItem="ktX-AL-I0r" secondAttribute="bottom" constant="15" id="c6q-ay-AE9"/>
-                            <constraint firstItem="BHd-yQ-Ioz" firstAttribute="top" secondItem="Nr6-zx-3Kh" secondAttribute="bottom" constant="13" id="eXY-hH-fhz"/>
                             <constraint firstItem="fGv-Z1-Mdv" firstAttribute="leading" secondItem="Cx3-1j-5Yk" secondAttribute="leadingMargin" constant="-20" id="gTJ-Qh-dvC"/>
                             <constraint firstItem="ktX-AL-I0r" firstAttribute="top" secondItem="kN3-kO-7Hk" secondAttribute="bottom" constant="15" id="nLz-mb-c9o"/>
                             <constraint firstItem="kN3-kO-7Hk" firstAttribute="centerX" secondItem="Cx3-1j-5Yk" secondAttribute="centerX" id="o2l-ZZ-l2G"/>
                             <constraint firstItem="0Ej-XX-yPG" firstAttribute="centerX" secondItem="Cx3-1j-5Yk" secondAttribute="centerX" id="rrz-BR-hSd"/>
+                            <constraint firstItem="fGv-Z1-Mdv" firstAttribute="top" secondItem="Nr6-zx-3Kh" secondAttribute="bottom" constant="93" id="tzS-Dg-C7z"/>
                             <constraint firstItem="BHd-yQ-Ioz" firstAttribute="centerX" secondItem="Cx3-1j-5Yk" secondAttribute="centerX" id="ySH-ff-RY7"/>
                         </constraints>
                     </view>
@@ -371,7 +381,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g1B-SW-DsW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="452" y="-2068"/>
+            <point key="canvasLocation" x="468" y="-2068"/>
         </scene>
     </scenes>
     <resources>
