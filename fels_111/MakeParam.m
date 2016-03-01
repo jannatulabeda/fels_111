@@ -89,4 +89,20 @@
                             KEY_AUTH_TOKEN : authToken};
     return param;
 }
+
++ (NSDictionary *)makeUpdateProfileWithName:(NSString *)name
+                                      email:(NSString *)email
+                                   password:(NSString *)password
+                       passwordConfirmation:(NSString *)passwordConfirmation
+                                     avatar:(NSString *)avatarString
+                                  authtoken:(NSString *)authtoken {
+  NSDictionary *param = @{KEY_USER:@{KEY_NAME:name,
+                                    KEY_EMAIL:email,
+                                 KEY_PASSWORD:password,
+                    KEY_PASSWORD_CONFIRMATION:passwordConfirmation,
+                                   KEY_AVATAR:avatarString},
+                                KEY_AUTH_TOKEN:authtoken};
+  return param;
+}
+
 @end

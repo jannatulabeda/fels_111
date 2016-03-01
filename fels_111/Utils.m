@@ -18,10 +18,21 @@
   return user;
 }
 
++ (User *)getUserFromKeychainWithNameAndEmail {
+  UICKeyChainStore *chain = [self initTheKeyChain];
+  User *user = [[User alloc] init];
+  user = [self getUserFromKeychain];
+  user.name = chain[KEYCHAIN_KEY_NAME];
+  user.email = chain[KEYCHAIN_KEY_EMAIL];
+  return user;
+}
+
 + (void)setUserToKeyChain:(User *)user {
   UICKeyChainStore *chain = [self initTheKeyChain];
   [chain setString:[NSString stringWithFormat:@"%d", user.userId] forKey:KEYCHAIN_KEY_ID];
   [chain setString:user.authToken forKey:KEYCHAIN_KEY_TOKEN];
+  [chain setString:user.name forKey:KEYCHAIN_KEY_NAME];
+  [chain setString:user.email forKey:KEYCHAIN_KEY_EMAIL];
 }
 
 + (UICKeyChainStore *)initTheKeyChain {
@@ -42,5 +53,13 @@
     [alertController addAction:ok];
     
     [viewController presentViewController:alertController animated:YES completion:nil];
+}
+
++ (void)clearUserFromTheKeychain {
+  UICKeyChainStore *chain = [self initTheKeyChain];
+  [chain removeItemForKey:KEYCHAIN_KEY_TOKEN];
+  [chain removeItemForKey:KEYCHAIN_KEY_ID];
+  [chain removeItemForKey:KEYCHAIN_KEY_NAME];
+  [chain removeItemForKey:KEYCHAIN_KEY_EMAIL];
 }
 @end

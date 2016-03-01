@@ -45,4 +45,10 @@
 + (NSString *)getWordListURL {
     return [NSString stringWithFormat:@"%@/%@%@", BASE_URL, KEY_WORDS, REQUEST_EXTENSION];
 }
+
+//Returns URL string for update profile request
++ (NSString *)getUpdateProfileURLWithUserId:(int)userID {
+  return [NSString stringWithFormat:@"%@/%@/%d%@", BASE_URL, KEY_USERS, userID, REQUEST_EXTENSION];
+}
+
 @end

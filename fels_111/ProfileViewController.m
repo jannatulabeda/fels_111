@@ -62,6 +62,7 @@
 }
 
 - (IBAction)logoutButtonPressed:(id)sender {
+  [Utils clearUserFromTheKeychain];
   [self performSegueWithIdentifier:TO_LOGIN sender:self];
 }
 

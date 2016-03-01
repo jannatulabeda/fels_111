@@ -74,6 +74,8 @@ NSString *const ERROR_INVALID_COMBINATION = @"Invalid email/password combination
 NSString *const KEYCHAIN_KEY_SERVICE = @"com.framgia.fels-111";
 NSString *const KEYCHAIN_KEY_TOKEN = @"token";
 NSString *const KEYCHAIN_KEY_ID = @"id";
+NSString *const KEYCHAIN_KEY_NAME = @"name";
+NSString *const KEYCHAIN_KEY_EMAIL = @"email";
 
 #pragma mark - String Literals
 NSString *const LEARNED = @"Learned";

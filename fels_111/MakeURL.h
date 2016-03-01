@@ -30,4 +30,8 @@
 
 // Returns URL string for word list request
 + (NSString *)getWordListURL;
+
+//Returns URL string for update profile request
++ (NSString *)getUpdateProfileURLWithUserId:(int)userID;
+
 @end

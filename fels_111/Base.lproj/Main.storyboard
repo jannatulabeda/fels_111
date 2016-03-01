@@ -722,7 +722,7 @@
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dYW-QN-YJq">
                                                 <rect key="frame" x="190" y="189" width="220" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Re-Type Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTO-NQ-Aag">
                                                 <rect key="frame" x="225" y="227" width="185" height="27"/>
@@ -733,7 +733,7 @@
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tWH-iJ-PDw">
                                                 <rect key="frame" x="190" y="262" width="220" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="learned.png" translatesAutoresizingMaskIntoConstraints="NO" id="ldB-aE-Ny1">
                                                 <rect key="frame" x="190" y="300" width="27" height="27"/>
@@ -768,6 +768,15 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pass_key.png" translatesAutoresizingMaskIntoConstraints="NO" id="iat-UF-XDD">
                                                 <rect key="frame" x="190" y="227" width="27" height="27"/>
                                             </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n72-bd-Oe8">
+                                                <rect key="frame" x="190" y="408" width="220" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="16" id="hjX-df-mxk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -789,6 +798,7 @@
                                             <constraint firstItem="E1H-cQ-RGU" firstAttribute="height" secondItem="PTO-NQ-Aag" secondAttribute="height" id="H2f-8r-xeZ"/>
                                             <constraint firstItem="NyP-8g-frX" firstAttribute="leading" secondItem="sJD-Tv-om7" secondAttribute="leading" id="Jnx-bj-hce"/>
                                             <constraint firstItem="zP1-b7-M1L" firstAttribute="width" secondItem="Vj1-LD-23x" secondAttribute="width" id="KDJ-gc-5Z8"/>
+                                            <constraint firstItem="n72-bd-Oe8" firstAttribute="top" secondItem="Ar8-GI-hvD" secondAttribute="bottom" constant="8" id="LPp-3I-Jje"/>
                                             <constraint firstItem="PTO-NQ-Aag" firstAttribute="leading" secondItem="zP1-b7-M1L" secondAttribute="leading" id="Loo-ax-0JS"/>
                                             <constraint firstItem="Ar8-GI-hvD" firstAttribute="top" secondItem="tcR-wv-GOe" secondAttribute="bottom" constant="8" id="NhW-Wo-yqc"/>
                                             <constraint firstItem="ldB-aE-Ny1" firstAttribute="leading" secondItem="iat-UF-XDD" secondAttribute="leading" id="PU4-VW-9pU"/>
@@ -801,6 +811,7 @@
                                             <constraint firstItem="NyP-8g-frX" firstAttribute="height" secondItem="sJD-Tv-om7" secondAttribute="height" id="UNf-6G-vzN"/>
                                             <constraint firstItem="sJD-Tv-om7" firstAttribute="width" secondItem="XYa-hk-a6i" secondAttribute="width" id="Xh2-mn-uEq"/>
                                             <constraint firstItem="iat-UF-XDD" firstAttribute="height" secondItem="NyP-8g-frX" secondAttribute="height" id="XwZ-cM-J2P"/>
+                                            <constraint firstItem="n72-bd-Oe8" firstAttribute="leading" secondItem="tcR-wv-GOe" secondAttribute="leading" id="Xx5-cc-QQP"/>
                                             <constraint firstItem="Vj1-LD-23x" firstAttribute="height" secondItem="cJk-Nh-uTf" secondAttribute="height" id="Yk2-g1-vVU"/>
                                             <constraint firstItem="M2t-Dw-sxo" firstAttribute="top" secondItem="lwH-Zg-FOX" secondAttribute="bottom" constant="36" id="ZIE-UV-wic"/>
                                             <constraint firstItem="tWH-iJ-PDw" firstAttribute="width" secondItem="dYW-QN-YJq" secondAttribute="width" id="atC-LN-jOD"/>
@@ -833,6 +844,7 @@
                                             <constraint firstItem="XYa-hk-a6i" firstAttribute="top" secondItem="BFf-nx-pjL" secondAttribute="top" constant="8" id="uYd-A2-mTL"/>
                                             <constraint firstItem="YuB-kl-fxU" firstAttribute="centerX" secondItem="BFf-nx-pjL" secondAttribute="centerX" id="ufw-2l-kQ2"/>
                                             <constraint firstItem="dYW-QN-YJq" firstAttribute="height" secondItem="GFX-WA-vS4" secondAttribute="height" id="wO1-KV-i8U"/>
+                                            <constraint firstItem="n72-bd-Oe8" firstAttribute="width" secondItem="tcR-wv-GOe" secondAttribute="width" id="x1u-7f-MSs"/>
                                             <constraint firstItem="tWH-iJ-PDw" firstAttribute="height" secondItem="dYW-QN-YJq" secondAttribute="height" id="z8j-fF-A8V"/>
                                         </constraints>
                                     </view>
@@ -870,6 +882,13 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="800"/>
                     <connections>
+                        <outlet property="updateAvatarImageView" destination="M2t-Dw-sxo" id="HfX-oV-VXZ"/>
+                        <outlet property="updateEmailTextField" destination="YuB-kl-fxU" id="VUZ-d7-0Ej"/>
+                        <outlet property="updateErrorLabel" destination="n72-bd-Oe8" id="3ky-SH-lrt"/>
+                        <outlet property="updateFullNameTextField" destination="tcR-wv-GOe" id="Pcr-nL-8uu"/>
+                        <outlet property="updateNewPasswordTextField" destination="dYW-QN-YJq" id="QcW-0l-wsS"/>
+                        <outlet property="updateOldPasswordTextField" destination="GFX-WA-vS4" id="vxo-sJ-0AK"/>
+                        <outlet property="updateReTypePasswordTextField" destination="tWH-iJ-PDw" id="s8X-r5-dSd"/>
                         <outlet property="updateScrollView" destination="3oY-5H-BCq" id="vga-fr-zO3"/>
                     </connections>
                 </viewController>
