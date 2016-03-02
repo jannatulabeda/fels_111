@@ -77,5 +77,5 @@ NSString *const WORDS = @"words";
 
 #pragma mark - Segue Identifiers
 NSString *const TO_LOGIN = @"ToLogin";
-
+NSString *const TO_PROFILE_FROM_REGISTER = @"ToProfileFromRegister";
 @end

@@ -77,5 +77,6 @@ extern NSString *const WORDS;
 
 #pragma mark - Segue Identifiers
 extern NSString *const TO_LOGIN;
+extern NSString *const TO_PROFILE_FROM_REGISTER;
 
 @end
