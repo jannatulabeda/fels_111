@@ -108,7 +108,20 @@
     word.answered = [word.answersArray objectAtIndex:button.tag - 1];
     word.isCorrectlyAnswered = word.answered.isCorrect ? YES : NO;
     [self.wordsArray replaceObjectAtIndex:countWord-1 withObject:word];
+
     // Load next word and answers
+    // Send request for create lesson
+    [JTProgressHUD show];
+    LessonManager *lessonManager = [[LessonManager alloc] init];
+    lessonManager.delegate = self;
+    User *user = [Utils getUserFromKeychain];
+    [lessonManager doUpdateLessonWithAuthToken:user.authToken
+                                      lessonId:[self.lesson lessonId]
+                                      resutlId:[word.resultId intValue]
+                                      answerId:[word.answered answerId]];
+}
+
+- (IBAction)nextButtonPressed:(id)sender {
     [self loadNextQuestionAndAnswers];
 }
 
@@ -131,4 +144,10 @@
     [self loadNextQuestionAndAnswers];
 }
 
+- (void)didReceiveUpdateLessonResponseWithBool:(BOOL)isSuccess {
+    [JTProgressHUD hide];
+    if (isSuccess) {
+        [self loadNextQuestionAndAnswers];
+    }
+}
 @end

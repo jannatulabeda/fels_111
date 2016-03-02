@@ -37,8 +37,8 @@
 }
 
 // Returns URL string for create lesson request
-+ (NSString *)getUpdateLessonURLWithCategoryId:(int)categoryId {
-    return [NSString stringWithFormat:@"%@/%@/%d%@", BASE_URL, KEY_LESSONS, categoryId, REQUEST_EXTENSION];
++ (NSString *)getUpdateLessonURLWithLessonId:(int)lessonId {
+    return [NSString stringWithFormat:@"%@/%@/%d%@", BASE_URL, KEY_LESSONS, lessonId, REQUEST_EXTENSION];
 }
 
 // Returns URL string for word list request

@@ -62,6 +62,8 @@ NSInteger const MIN_LENGTH_PASSWORD = 6;
 
 NSString *const CHECKED_IMAGE = @"checked.png";
 NSString *const UNCHECKED_IMAGE = @"unchecked.png";	
+NSString *const RIGHT_SIGN_IMAGE = @"rightSign.png";
+NSString *const CROSS_SIGN_IMAGE = @"crossSign.png";
 
 #pragma mark - Error Strings
 NSString *const ERROR_EMAIL_REQUIRED = @"Email address required";
@@ -86,5 +88,8 @@ NSString *const WORDS = @"words";
 NSString *const TO_LOGIN = @"ToLogin";
 NSString *const TO_PROFILE_FROM_REGISTER = @"ToProfileFromRegister";
 NSString *const TO_PROFILE = @"ToProfile";
+
+#pragma mark - Constant values
+int const PER_PAGE_DATA = 10;
 
 @end

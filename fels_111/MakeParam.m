@@ -67,11 +67,9 @@
 + (NSDictionary *)makeUpdateLessonParamWithLearned:(BOOL)learned
                                   resultAttributes:(NSDictionary *)resultAttribute
                                          authToken:(NSString *)authToken {
-    NSDictionary *param = @{KEY_LESSON: @{KEY_LEARNED: [NSNumber numberWithBool:learned],
-                                           KEY_RESULT_ATTRIBUTES: resultAttribute,
-                                           KEY_AUTH_TOKEN: authToken
-                                           }
-                            };
+    NSDictionary *param = @{KEY_LEARNED: [NSNumber numberWithBool:learned],
+                            KEY_RESULT_ATTRIBUTES: resultAttribute,
+                            KEY_AUTH_TOKEN: authToken};
     return param;
 }
 

@@ -28,12 +28,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.categoryArray = [[NSMutableArray alloc] init];
     // Initially page number is set to 1
     pageNumber = 1;
-    // Number of data per page is set to 3 for testing purpose
-    perPageData = 3;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -47,7 +44,7 @@
     
     // Send request for category list
     User *user = [Utils getUserFromKeychain];
-    [categoryManager doGetCategoriesWithAuthToken:user.authToken pageNumber:pageNumber perPageData:perPageData];
+    [categoryManager doGetCategoriesWithAuthToken:user.authToken pageNumber:pageNumber perPageData:PER_PAGE_DATA];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -76,63 +73,25 @@
     
     // Configure the cell...
     if (indexPath.row <= [self.categoryArray count]) {
-        
         // Get category object
         LessonCategory *category = [self.categoryArray objectAtIndex:indexPath.row];
         
         // Set category name
         cell.categoryNameLabel.text = category.categoryName;
-        
         // Set learned words
         if (category.learnedWords > 1) {
             cell.learnedWordsLabel.text = [NSString stringWithFormat:@"You have learned %i words", category.learnedWords];
         } else {
             cell.learnedWordsLabel.text = [NSString stringWithFormat:@"You have learned %i word", category.learnedWords];
         }
-        
         // [Need to ask] about it
-        cell.contentLabel.text = @""; // No API data found [Need to ask]
-        
+        cell.contentLabel.text = @""; // No API data found
         // Set image
         [cell.categoryImageView sd_setImageWithURL:[NSURL URLWithString:category.imageURL]
                                   placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
     }
     return cell;
 }
-
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
-
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
- } else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
-
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
 
 #pragma mark - Navigation
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -149,10 +108,18 @@
 #pragma mark - CategoryManager Delegate
 // Receive category data from API response
 - (void)didReceiveCategoryDataWithArray:(NSArray *)categoryArray {
-    
-    [self.categoryArray addObjectsFromArray:categoryArray];
-    [self.tableView reloadData];
+    if (categoryArray && categoryArray.count > 0) {
+        [self.categoryArray addObjectsFromArray:categoryArray];
+        [self.tableView reloadData];
+    } else {
+        UILabel *noCategoryLabel = [[UILabel alloc]init];
+        noCategoryLabel.text = @"No category found!!! :(";
+        [noCategoryLabel sizeToFit];
+        [self.view addSubview:noCategoryLabel];
+    }
     [JTProgressHUD hide];
 }
 
+-(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue {
+}
 @end
