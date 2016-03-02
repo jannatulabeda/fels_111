@@ -76,6 +76,7 @@ NSString *const KEYCHAIN_KEY_TOKEN = @"token";
 NSString *const KEYCHAIN_KEY_ID = @"id";
 NSString *const KEYCHAIN_KEY_NAME = @"name";
 NSString *const KEYCHAIN_KEY_EMAIL = @"email";
+NSString *const KEYCHAIN_KEY_REMEMBERED = @"remember_me";
 
 #pragma mark - String Literals
 NSString *const LEARNED = @"Learned";
@@ -84,4 +85,6 @@ NSString *const WORDS = @"words";
 #pragma mark - Segue Identifiers
 NSString *const TO_LOGIN = @"ToLogin";
 NSString *const TO_PROFILE_FROM_REGISTER = @"ToProfileFromRegister";
+NSString *const TO_PROFILE = @"ToProfile";
+
 @end

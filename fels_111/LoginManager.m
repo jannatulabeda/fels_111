@@ -35,6 +35,7 @@
         Parser *parserLogin = [[Parser alloc] init];
         user = [parserLogin parseLoginResponse:response];
         [Utils setUserToKeyChain:user];
+        [Utils setRememberMeToKeychain:rememberMe];
         [JTProgressHUD hide];
         completeBlock(YES,@"");
       }

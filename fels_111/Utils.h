@@ -17,6 +17,8 @@
 + (User *)getUserFromKeychain;
 + (User *)getUserFromKeychainWithNameAndEmail;
 + (void)setUserToKeyChain:(User *)user;
++ (void)setRememberMeToKeychain:(BOOL)rememberMe;
++ (BOOL)getRemeberMeToKeychain;
 + (void)clearUserFromTheKeychain;
 
 // Show error message with UIAlertController

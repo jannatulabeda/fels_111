@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  // Do any additional setup after loading the view, typically from a nib.
+  [self checkRememberMe];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -39,9 +39,11 @@
 - (IBAction)toggleRememberMeButtonImage:(id)sender {
   if ([sender isSelected]) {
     [sender setImage:[UIImage imageNamed:UNCHECKED_IMAGE] forState:UIControlStateNormal];
+    self.rememberMeChecked = NO;
     [sender setSelected:NO];
   } else {
     [sender setImage:[UIImage imageNamed:CHECKED_IMAGE] forState:UIControlStateSelected];
+    self.rememberMeChecked = YES;
     [sender setSelected:YES];
   }
 }
@@ -49,7 +51,7 @@
 - (IBAction)signInButtonPressed:(id)sender {
   [LoginManager doSignInWithEmail:self.emailLoginTextField.text
                          password:self.passwordLoginTextField.text
-                         remember:YES
+                         remember:self.rememberMeChecked
                       errorMessage:^(BOOL isValid, NSString *errMessage){
                         if (!isValid) {
                           self.loginErrorLabel.text = ERROR_INVALID_COMBINATION;
@@ -70,4 +72,9 @@
   self.loginErrorLabel.text = @"";
 }
 
+- (void)checkRememberMe {
+  if ([Utils getRemeberMeToKeychain]) {
+    [self performSegueWithIdentifier:TO_PROFILE sender:self];
+  }
+}
 @end
