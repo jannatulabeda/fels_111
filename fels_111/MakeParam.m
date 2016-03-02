@@ -75,4 +75,18 @@
     return param;
 }
 
+// Generate word list param for Word List API
+// Return parameter as a dictionary
++ (NSDictionary *)makeWordListParamWithCategoryId:(int)categoryId
+                                           option:(NSString *)option
+                                             page:(int)page
+                                      perPageData:(int)perPage
+                                        authToken:(NSString *)authToken {
+    NSDictionary *param = @{KEY_CATEGORY_ID: [NSNumber numberWithInt:categoryId],
+                            KEY_OPTION: option,
+                            KEY_PAGE: [NSNumber numberWithInt:page],
+                            KEY_PER_PAGE: [NSNumber numberWithInt:perPage],
+                            KEY_AUTH_TOKEN : authToken};
+    return param;
+}
 @end

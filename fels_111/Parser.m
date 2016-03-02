@@ -121,6 +121,35 @@
     return lessonObject;
 }
 
+// Parse json data response for word list request
+// Returns words array
+- (NSArray *)parseWordListResponse:(id)responseData {
+    NSMutableArray *wordsArray = [[NSMutableArray alloc] init];
+    // Get words array
+    NSArray *wordsArrayFromResponse = [[self parseJSONData:responseData] objectForKey:KEY_WORDS];
+    for (NSDictionary *wordDict in wordsArrayFromResponse) {
+        // Make each word object
+        Word *word = [[Word alloc] init];
+        word.wordContent = [wordDict objectForKey:KEY_CONTENT];
+        word.wordId = [[wordDict objectForKey:KEY_ID] intValue];
+        word.resultId = [wordDict objectForKey:KEY_RESULT_ID];
+        
+        NSArray *answersArrayFromResponse = [wordDict objectForKey:KEY_ANSWERS];
+        NSMutableArray *answerArray = [[NSMutableArray alloc]init];
+        for (NSDictionary *answerDict in answersArrayFromResponse) {
+            //Make each answer object
+            Answer *answer = [[Answer alloc] init];
+            answer.answerId = [[answerDict objectForKey:KEY_ID] intValue];
+            answer.answerContent = [answerDict objectForKey:KEY_CONTENT];
+            answer.isCorrect = [[answerDict objectForKey:KEY_IS_CORRECT] boolValue];
+            [answerArray addObject:answer];
+        }
+        word.answersArray = answerArray;
+        [wordsArray addObject:word];
+    }
+    return wordsArray;
+}
+
 // Parse JSON data and returns as a dictionary
 - (id)parseJSONData:(id)responseData {
     if ([responseData isKindOfClass:[NSData class]]) {

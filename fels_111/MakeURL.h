@@ -27,4 +27,7 @@
 
 // Returns URL string for update lesson request
 + (NSString *)getUpdateLessonURLWithCategoryId:(int)categoryId;
+
+// Returns URL string for word list request
++ (NSString *)getWordListURL;
 @end

@@ -49,6 +49,10 @@ extern NSString *const KEY_LEARNED;
 extern NSString *const KEY_RESULT_ATTRIBUTES;
 extern NSString *const KEY_LESSONS;
 extern NSString *const KEY_ANSWER_ID;
+extern NSString *const KEY_CATEGORY_ID;
+extern NSString *const KEY_OPTION;
+extern NSString *const KEY_ALL_WORD;
+extern NSString *const KEY_NO_LEARN;
 
 #pragma mark - Data validation Constants
 extern NSInteger const MAX_LENGTH_USER_NAME;

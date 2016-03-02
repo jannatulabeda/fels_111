@@ -40,4 +40,9 @@
 + (NSString *)getUpdateLessonURLWithCategoryId:(int)categoryId {
     return [NSString stringWithFormat:@"%@/%@/%d%@", BASE_URL, KEY_LESSONS, categoryId, REQUEST_EXTENSION];
 }
+
+// Returns URL string for word list request
++ (NSString *)getWordListURL {
+    return [NSString stringWithFormat:@"%@/%@%@", BASE_URL, KEY_WORDS, REQUEST_EXTENSION];
+}
 @end
