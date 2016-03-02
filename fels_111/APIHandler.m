@@ -92,16 +92,16 @@
               params:(NSDictionary *)params
              success:(ResponseSuccess)success
                 fail:(ResponseFail)fail {
-    // Get session manager
-    AFHTTPSessionManager *manager = [self manager];
-    
-    // Make patch request
-    [manager PATCH:url parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        success(responseObject);
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        if (fail) {
-            fail(error);
-        }
-    }];
+  // Get session manager
+  AFHTTPSessionManager *manager = [self manager];
+  
+  // Make patch request
+  [manager PATCH:url parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    success(responseObject);
+  } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+    if (fail) {
+      fail(error);
+    }
+  }];
 }
 @end

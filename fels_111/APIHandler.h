@@ -51,7 +51,8 @@ typedef void(^ResponseFail)(NSError *error);
  * @param fail fail block for receiving failure response
  */
 + (void)patchWithUrl:(NSString *)url
-            params:(NSDictionary *)params
-           success:(ResponseSuccess)success
-              fail:(ResponseFail)fail;
+              params:(NSDictionary *)params
+             success:(ResponseSuccess)success
+                fail:(ResponseFail)fail;
+
 @end

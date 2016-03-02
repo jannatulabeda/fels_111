@@ -50,4 +50,13 @@
                                              page:(int)page
                                           perPageData:(int)perPage
                                          authToken:(NSString *)authToken;
+// Generate update profile API
+//Return parameter as a dictionary
++ (NSDictionary *)makeUpdateProfileWithName:(NSString *)name
+                                      email:(NSString *)email
+                                   password:(NSString *)password
+                       passwordConfirmation:(NSString *)passwordConfirmation
+                                     avatar:(NSString *)avatarString
+                                  authtoken:(NSString *)authtoken;
+
 @end

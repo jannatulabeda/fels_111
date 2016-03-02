@@ -10,6 +10,14 @@
 
 @interface UpdateViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *updateEmailTextField;
+@property (weak, nonatomic) IBOutlet UITextField *updateOldPasswordTextField;
+@property (weak, nonatomic) IBOutlet UITextField *updateNewPasswordTextField;
+@property (weak, nonatomic) IBOutlet UITextField *updateReTypePasswordTextField;
+@property (weak, nonatomic) IBOutlet UITextField *updateFullNameTextField;
+@property (weak, nonatomic) IBOutlet UIImageView *updateAvatarImageView;
+@property (weak, nonatomic) IBOutlet UILabel *updateErrorLabel;
+
 @property (weak, nonatomic) IBOutlet UIScrollView *updateScrollView;
 
 - (IBAction)updateButtonPressed:(id)sender;

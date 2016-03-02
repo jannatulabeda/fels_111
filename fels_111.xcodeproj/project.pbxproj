@@ -18,6 +18,7 @@
 		6474454C1C804B00004C2DD7 /* ProfileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6474454B1C804B00004C2DD7 /* ProfileManager.m */; };
 		6474454E1C8077D5004C2DD7 /* Word.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6474454D1C8077D5004C2DD7 /* Word.storyboard */; };
 		647445511C808263004C2DD7 /* UserActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 647445501C808263004C2DD7 /* UserActivityTableViewCell.m */; };
+		646D4F1C1C84819C00ACD5D3 /* UpdateProfileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 646D4F1B1C84819C00ACD5D3 /* UpdateProfileManager.m */; };
 		6485EA571C7D691D00D7A7F9 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6485EA561C7D691D00D7A7F9 /* ProfileViewController.m */; };
 		6485EA5B1C7D71D900D7A7F9 /* learned.png in Resources */ = {isa = PBXBuildFile; fileRef = 6485EA5A1C7D71D900D7A7F9 /* learned.png */; };
 		6485EA5E1C7D766200D7A7F9 /* UpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6485EA5D1C7D766200D7A7F9 /* UpdateViewController.m */; };
@@ -73,6 +74,8 @@
 		6474454D1C8077D5004C2DD7 /* Word.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Word.storyboard; sourceTree = "<group>"; };
 		6474454F1C808263004C2DD7 /* UserActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserActivityTableViewCell.h; sourceTree = "<group>"; };
 		647445501C808263004C2DD7 /* UserActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserActivityTableViewCell.m; sourceTree = "<group>"; };
+		646D4F1A1C84819C00ACD5D3 /* UpdateProfileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateProfileManager.h; sourceTree = "<group>"; };
+		646D4F1B1C84819C00ACD5D3 /* UpdateProfileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateProfileManager.m; sourceTree = "<group>"; };
 		6485EA551C7D691D00D7A7F9 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		6485EA561C7D691D00D7A7F9 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		6485EA5A1C7D71D900D7A7F9 /* learned.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = learned.png; sourceTree = "<group>"; };
@@ -268,6 +271,8 @@
 				B1587E651C84250B00C27E73 /* RegisterManager.m */,
 				B1F406971C85CE9E00304777 /* WordListManager.h */,
 				B1F406981C85CE9E00304777 /* WordListManager.m */,
+				646D4F1A1C84819C00ACD5D3 /* UpdateProfileManager.h */,
+				646D4F1B1C84819C00ACD5D3 /* UpdateProfileManager.m */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -484,6 +489,7 @@
 				6474454C1C804B00004C2DD7 /* ProfileManager.m in Sources */,
 				648EC8421C7B112B00D62327 /* LoginManager.m in Sources */,
 				B1E7F8541C75C5360096920B /* Parser.m in Sources */,
+				646D4F1C1C84819C00ACD5D3 /* UpdateProfileManager.m in Sources */,
 				B1891E1B1C7F196400EF27A7 /* CategoryManager.m in Sources */,
 				64189FDB1C732C950067F895 /* main.m in Sources */,
 				B1E7F8521C75C5360096920B /* MakeParam.m in Sources */,

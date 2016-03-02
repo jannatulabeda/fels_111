@@ -74,6 +74,8 @@ extern NSString *const ERROR_INVALID_COMBINATION;
 extern NSString *const KEYCHAIN_KEY_SERVICE;
 extern NSString *const KEYCHAIN_KEY_TOKEN;
 extern NSString *const KEYCHAIN_KEY_ID;
+extern NSString *const KEYCHAIN_KEY_NAME;
+extern NSString *const KEYCHAIN_KEY_EMAIL;
 
 #pragma mark - String Literals
 extern NSString *const LEARNED;

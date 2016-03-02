@@ -15,7 +15,9 @@
 @interface Utils : NSObject
 
 + (User *)getUserFromKeychain;
++ (User *)getUserFromKeychainWithNameAndEmail;
 + (void)setUserToKeyChain:(User *)user;
++ (void)clearUserFromTheKeychain;
 
 // Show error message with UIAlertController
 + (void)showErrorMessageWithTitle:(NSString *)title
