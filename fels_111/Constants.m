@@ -64,6 +64,7 @@ NSString *const CHECKED_IMAGE = @"checked.png";
 NSString *const UNCHECKED_IMAGE = @"unchecked.png";	
 NSString *const RIGHT_SIGN_IMAGE = @"rightSign.png";
 NSString *const CROSS_SIGN_IMAGE = @"crossSign.png";
+NSString *const AVATAR_PLACEHOLDER_IMAGE = @"avatar.png";
 
 #pragma mark - Error Strings
 NSString *const ERROR_EMAIL_REQUIRED = @"Email address required";
@@ -79,6 +80,7 @@ NSString *const KEYCHAIN_KEY_ID = @"id";
 NSString *const KEYCHAIN_KEY_NAME = @"name";
 NSString *const KEYCHAIN_KEY_EMAIL = @"email";
 NSString *const KEYCHAIN_KEY_REMEMBERED = @"remember_me";
+NSString *const KEYCHAIN_KEY_AVATAR = @"avatar";
 
 #pragma mark - String Literals
 NSString *const LEARNED = @"Learned";
@@ -91,5 +93,14 @@ NSString *const TO_PROFILE = @"ToProfile";
 
 #pragma mark - Constant values
 int const PER_PAGE_DATA = 10;
+
+#pragma mark - Title Message String values
+NSString *const TITLE_AVATAR = @"Avatar";
+NSString *const TITLE_AVATAR_MESSAGE = @"Select a photo";
+NSString *const TITLE_CANCEL = @"Cancel";
+NSString *const TITLE_GALLERY = @"Choose from Gallery";
+NSString *const TITLE_CAMERA = @"Take Photo";
+NSString *const TITLE_CAMERA_UNAVAILABLE_ERROR = @"Camera Not Found";
+NSString *const TITLE_CAMERA_ERROR = @"Oops!!!";
 
 @end

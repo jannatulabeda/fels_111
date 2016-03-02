@@ -20,15 +20,18 @@
                    afterComplete:(void (^)(BOOL isOK, User *user))completeblock{
   NSDictionary *paramShowUser = [MakeParam makeShowUserParamWithAuthToken:authToken];
   NSString *showUserURL = [MakeURL getShowUserProfileURLWithUserId:userId];
+  [JTProgressHUD show];
   [APIHandler getWithUrl:showUserURL params:paramShowUser
                  success:^(id response){
                    if (response != nil) {
+                     [JTProgressHUD hide];
                      User *usr = [[User alloc] init];
                      Parser *parserShowUser = [[Parser alloc] init];
                      usr = [parserShowUser parseShowUserResponse:response];
                      completeblock(YES,usr);
                    }
   } fail:^(NSError *error) {
+    [JTProgressHUD hide];
     completeblock(NO,nil);
   }];
 }

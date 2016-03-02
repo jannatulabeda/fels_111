@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UpdateViewController : UIViewController
+@interface UpdateViewController : UIViewController<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *updateEmailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *updateOldPasswordTextField;
@@ -17,6 +17,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *updateFullNameTextField;
 @property (weak, nonatomic) IBOutlet UIImageView *updateAvatarImageView;
 @property (weak, nonatomic) IBOutlet UILabel *updateErrorLabel;
+@property (strong, nonatomic) UIImagePickerController *avatarPicker;
+@property (strong, nonatomic) NSString *avatarString;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *updateScrollView;
 
