@@ -12,7 +12,8 @@
 #import "Utils.h"
 #import "User.h"
 #import "UpdateProfileManager.h"
-
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "Constants.h"
 
 @interface UpdateViewController ()
 
@@ -28,26 +29,97 @@
   self.automaticallyAdjustsScrollViewInsets = NO;
   
   User *user = [[User alloc] init];
-  user = [Utils getUserFromKeychainWithNameAndEmail];
+  user = [Utils getUserFromKeychainWithNameWithEmailWithAvatar];
   self.updateFullNameTextField.text = user.name;
   self.updateEmailTextField.text = user.email;
+  [self.updateAvatarImageView sd_setImageWithURL:[NSURL URLWithString:user.avatar]
+                                placeholderImage:[UIImage imageNamed:AVATAR_PLACEHOLDER_IMAGE]];
   self.updateOldPasswordTextField.userInteractionEnabled = NO;
+  
+  [self.updateAvatarImageView setUserInteractionEnabled:YES];
+  UITapGestureRecognizer *tapOnAvatar = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapOnAvatarAction:)];
+  [self.updateAvatarImageView addGestureRecognizer:tapOnAvatar];
+  
 }
 
 - (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+  [super didReceiveMemoryWarning];
+  // Dispose of any resources that can be recreated.
 }
 
 /*
-#pragma mark - Navigation
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)tapOnAvatarAction:(UITapGestureRecognizer *)tapOnAvatar {
+  UIAlertController *alert = [UIAlertController alertControllerWithTitle:TITLE_AVATAR message:TITLE_AVATAR_MESSAGE preferredStyle:UIAlertControllerStyleAlert];
+  UIAlertAction *cancel = [UIAlertAction actionWithTitle:TITLE_CANCEL
+                                                   style:UIAlertActionStyleDestructive
+                                                 handler:^(UIAlertAction *action) {
+                                                 }];
+  UIAlertAction *gallery = [UIAlertAction actionWithTitle:TITLE_GALLERY style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    [self chooseFromGallery];
+  }];
+  UIAlertAction *camera = [UIAlertAction actionWithTitle:TITLE_CAMERA style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    [self takePhoto];
+  }];
+  
+  [alert addAction:camera];
+  [alert addAction:gallery];
+  [alert addAction:cancel];
+  [self presentViewController:alert animated:YES completion:nil];
 }
-*/
+
+- (void)chooseFromGallery {
+  self.avatarPicker = [[UIImagePickerController alloc] init];
+  self.avatarPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+  self.avatarPicker.delegate = self;
+  [self presentViewController:self.avatarPicker animated:YES completion:nil];
+}
+
+- (void)takePhoto {
+  if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+    
+    UIAlertController *cameraErrorAlert = [UIAlertController alertControllerWithTitle:TITLE_CAMERA_ERROR message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *cameraNotFound = [UIAlertAction actionWithTitle:TITLE_CAMERA_UNAVAILABLE_ERROR style:UIAlertActionStyleDestructive handler:nil];
+    
+    [cameraErrorAlert addAction:cameraNotFound];
+    [self presentViewController:cameraErrorAlert animated:YES completion:nil];
+  } else {
+    self.avatarPicker = [[UIImagePickerController alloc] init];
+    self.avatarPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    self.avatarPicker.delegate = self;
+    [self presentViewController:self.avatarPicker animated:YES completion:nil];
+  }
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+  UIImage *chosenImage = info[UIImagePickerControllerOriginalImage];
+  
+  // Resizing the image with respect to
+  // ImageViews Frame
+  CGSize viewSize = CGSizeMake(self.updateAvatarImageView.frame.size.width, self.updateAvatarImageView.frame.size.height);
+  
+  UIGraphicsBeginImageContext(viewSize);
+  [chosenImage drawInRect:CGRectMake(0,0,viewSize.width,viewSize.height)];
+  UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+  UIGraphicsEndImageContext();
+  
+  NSData *imgData = UIImagePNGRepresentation(newImage);
+  [self.updateAvatarImageView setImage:[[UIImage alloc] initWithData:imgData]];
+  [picker dismissViewControllerAnimated:YES completion:nil];
+
+}
+
+- (NSString *)encodeToBase64String:(UIImage *)image {
+  return [UIImageJPEGRepresentation(image,0.4) base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+}
 
 - (IBAction)updateButtonPressed:(id)sender {
   
@@ -68,15 +140,19 @@
     isValidPassword = YES;
   }
   
-  if (isValidEmail && isValidPassword && isValidName) {    
+  if (isValidEmail && isValidPassword && isValidName) {
     User *user = [[User alloc] init];
     user = [Utils getUserFromKeychain];
+    self.avatarString = @"";
+    if (self.updateAvatarImageView.image) {
+      self.avatarString = [self encodeToBase64String:self.updateAvatarImageView.image];
+    }
     [JTProgressHUD show];
     [UpdateProfileManager doUpdateProfileWithName:self.updateFullNameTextField.text
                                             email:self.updateEmailTextField.text
                                          password:self.updateNewPasswordTextField.text
                              passwordConfirmation:self.updateReTypePasswordTextField.text
-                                           avatar:@""
+                                           avatar:self.avatarString
                                         authtoken:user.authToken
                                            userID:user.userId
                                     afterComplete:^(BOOL isOK){
@@ -86,7 +162,7 @@
                                       } else {
                                         [JTProgressHUD hide];
                                       }
-          }];
+                                    }];
   } else {
     self.updateErrorLabel.text = errorString;
   }
@@ -97,3 +173,4 @@
   [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end
+

@@ -18,12 +18,13 @@
   return user;
 }
 
-+ (User *)getUserFromKeychainWithNameAndEmail {
++ (User *)getUserFromKeychainWithNameWithEmailWithAvatar {
   UICKeyChainStore *chain = [self initTheKeyChain];
   User *user = [[User alloc] init];
   user = [self getUserFromKeychain];
   user.name = chain[KEYCHAIN_KEY_NAME];
   user.email = chain[KEYCHAIN_KEY_EMAIL];
+  user.avatar = chain[KEYCHAIN_KEY_AVATAR];
   return user;
 }
 
@@ -33,6 +34,7 @@
   [chain setString:user.authToken forKey:KEYCHAIN_KEY_TOKEN];
   [chain setString:user.name forKey:KEYCHAIN_KEY_NAME];
   [chain setString:user.email forKey:KEYCHAIN_KEY_EMAIL];
+  [chain setString:user.avatar forKey:KEYCHAIN_KEY_AVATAR];
 }
 
 + (void)setRememberMeToKeychain:(BOOL)rememberMe {

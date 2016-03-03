@@ -12,6 +12,7 @@
 #import "User.h"
 #import "JTProgressHUD.h"
 #import "Constants.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface ProfileViewController ()
 
@@ -45,16 +46,14 @@
 - (void)loadUserData {
   User *user = [[User alloc] init];
   user = [Utils getUserFromKeychain];
-  [JTProgressHUD show];
   [ProfileManager getShowUserWithAuthToken:user.authToken userID:user.userId
                              afterComplete:^(BOOL isOk, User *usr){
                                if (isOk) {
-                                 [JTProgressHUD hide];
                                  self.userActivityArray = [[NSArray alloc] initWithArray:usr.activities];
                                  dispatch_async(dispatch_get_main_queue(), ^{
                                    [self fillOutTheFields:usr];
                                    [self.userActivityTableView reloadData];
-                                 });
+                                 });  
                                } else {
                                 // TO DO
                                }
@@ -71,6 +70,9 @@
   self.userEmailProfile.text = user.email;
   NSString *learnedWords = [NSString stringWithFormat:@"%@ %d %@", LEARNED, user.learnedWords, WORDS];
   self.numberOfLearnedWordsLabel.text = learnedWords;
+  [self.userAvatarImage sd_setImageWithURL:[NSURL URLWithString:user.avatar]
+                       placeholderImage:[UIImage imageNamed:AVATAR_PLACEHOLDER_IMAGE]
+   options:SDWebImageRefreshCached];
 }
 
 #pragma mark - UITableView

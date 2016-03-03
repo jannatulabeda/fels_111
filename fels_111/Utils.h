@@ -15,7 +15,7 @@
 @interface Utils : NSObject
 
 + (User *)getUserFromKeychain;
-+ (User *)getUserFromKeychainWithNameAndEmail;
++ (User *)getUserFromKeychainWithNameWithEmailWithAvatar;
 + (void)setUserToKeyChain:(User *)user;
 + (void)setRememberMeToKeychain:(BOOL)rememberMe;
 + (BOOL)getRemeberMeToKeychain;

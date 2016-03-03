@@ -38,12 +38,14 @@
   NSDictionary *userInfo = [showUserData objectForKey:KEY_USER];
   
   User *user = [[User alloc] init];
+  user.authToken = [userInfo objectForKey:KEY_AUTH_TOKEN];
   user.userId = [[userInfo objectForKey:KEY_ID] intValue];
   user.name = [userInfo objectForKey:KEY_NAME];
   user.email = [userInfo objectForKey:KEY_EMAIL];
   user.learnedWords = [[userInfo objectForKey:KEY_LEARNED_WORDS] intValue];
   user.activities = [userInfo objectForKey:KEY_ACTIVITIES];
-  
+  user.avatar = [userInfo objectForKey:KEY_AVATAR];
+
   return user;
 }
 

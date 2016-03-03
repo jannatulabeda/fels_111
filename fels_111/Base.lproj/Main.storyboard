@@ -206,10 +206,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar.png" translatesAutoresizingMaskIntoConstraints="NO" id="aJe-nP-3qZ">
-                                                <rect key="frame" x="308" y="347" width="92" height="85"/>
+                                                <rect key="frame" x="308" y="347" width="100" height="90"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="85" id="LCv-0J-2zm"/>
-                                                    <constraint firstAttribute="width" constant="92" id="auQ-03-uTd"/>
+                                                    <constraint firstAttribute="height" constant="90" id="LCv-0J-2zm"/>
+                                                    <constraint firstAttribute="width" constant="100" id="auQ-03-uTd"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
@@ -217,7 +217,7 @@
                                         <constraints>
                                             <constraint firstItem="RO5-rG-Vgq" firstAttribute="leading" secondItem="pYX-wB-zgm" secondAttribute="leading" id="0TD-BM-jAi"/>
                                             <constraint firstAttribute="height" constant="1200" id="2WX-AI-39a"/>
-                                            <constraint firstItem="RO5-rG-Vgq" firstAttribute="top" secondItem="aJe-nP-3qZ" secondAttribute="bottom" constant="52" id="Tvs-QL-Gke"/>
+                                            <constraint firstItem="RO5-rG-Vgq" firstAttribute="top" secondItem="aJe-nP-3qZ" secondAttribute="bottom" constant="47" id="Tvs-QL-Gke"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nm-gl-5ee">
@@ -325,7 +325,7 @@
                                     <constraint firstItem="pXb-m4-VnC" firstAttribute="top" secondItem="IpV-Jb-zYS" secondAttribute="bottom" constant="8" id="IDY-90-Iog"/>
                                     <constraint firstItem="aJe-nP-3qZ" firstAttribute="top" secondItem="g99-Zf-QaV" secondAttribute="bottom" constant="59" id="J6E-Kw-swA"/>
                                     <constraint firstItem="ad3-NM-h8A" firstAttribute="height" secondItem="MZ7-Dv-Nsh" secondAttribute="height" id="Jvh-HO-1LE"/>
-                                    <constraint firstItem="aJe-nP-3qZ" firstAttribute="trailing" secondItem="g99-Zf-QaV" secondAttribute="trailing" id="KCP-E7-8HF"/>
+                                    <constraint firstItem="aJe-nP-3qZ" firstAttribute="trailing" secondItem="g99-Zf-QaV" secondAttribute="trailing" constant="8" id="KCP-E7-8HF"/>
                                     <constraint firstItem="Jts-o4-Drc" firstAttribute="leading" secondItem="8gY-lL-vag" secondAttribute="leading" id="LvS-ox-ffz"/>
                                     <constraint firstItem="MZ7-Dv-Nsh" firstAttribute="top" secondItem="eDs-mW-eua" secondAttribute="bottom" constant="8" id="MSX-CK-K2a"/>
                                     <constraint firstItem="ZQV-7O-ZiU" firstAttribute="height" secondItem="Jts-o4-Drc" secondAttribute="height" id="N7X-rl-neI"/>
@@ -430,7 +430,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar.png" translatesAutoresizingMaskIntoConstraints="NO" id="zjb-eb-E6D">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zjb-eb-E6D">
                                 <rect key="frame" x="9" y="72" width="100" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="bH9-DU-X5T"/>
@@ -536,7 +536,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="n1X-XP-y5Z" firstAttribute="leading" secondItem="0m0-Tp-OZ5" secondAttribute="leadingMargin" constant="16" id="6Kv-2W-Rh9"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Xy7-4a-JDf" secondAttribute="trailing" id="CDM-A2-wW6"/>
@@ -596,7 +596,6 @@
                         <barButtonItem key="leftBarButtonItem" title="Log Out" id="7WW-mE-iqj">
                             <connections>
                                 <action selector="logoutButtonPressed:" destination="xws-GW-9dX" id="UB2-Wa-Pyc"/>
-                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="ToLogin" id="oUZ-kN-hfq"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="byX-Sb-a9v">
@@ -611,6 +610,7 @@
                         <outlet property="userAvatarImage" destination="zjb-eb-E6D" id="AEn-2Y-47e"/>
                         <outlet property="userEmailProfile" destination="O8g-d6-UBq" id="WaD-iA-305"/>
                         <outlet property="userNameLabel" destination="vXc-xN-YMV" id="UOH-ZW-mFY"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="ToLogin" id="eM5-G1-a59"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l2G-Wf-cqr" userLabel="First Responder" sceneMemberID="firstResponder"/>

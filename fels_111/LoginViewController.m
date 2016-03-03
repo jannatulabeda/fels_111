@@ -57,8 +57,10 @@
                           self.loginErrorLabel.text = ERROR_INVALID_COMBINATION;
                         } else {
                           if ([errMessage  isEqualToString:@""]) {
-                            [self performSegueWithIdentifier:@"ToProfile" sender:self];
-                            [self clearFieldData];
+                            dispatch_async(dispatch_get_main_queue(), ^{
+                              [self performSegueWithIdentifier:@"ToProfile" sender:self];
+                              [self clearFieldData];
+                            });
                           } else {
                             self.loginErrorLabel.text = errMessage;
                           }
@@ -74,7 +76,9 @@
 
 - (void)checkRememberMe {
   if ([Utils getRemeberMeToKeychain]) {
-    [self performSegueWithIdentifier:TO_PROFILE sender:self];
+    dispatch_async(dispatch_get_main_queue(), ^{
+      [self performSegueWithIdentifier:@"ToProfile" sender:self];
+    });
   }
 }
 @end

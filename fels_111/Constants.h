@@ -64,6 +64,7 @@ extern NSString *const CHECKED_IMAGE;
 extern NSString *const UNCHECKED_IMAGE;
 extern NSString *const RIGHT_SIGN_IMAGE;
 extern NSString *const CROSS_SIGN_IMAGE;
+extern NSString *const AVATAR_PLACEHOLDER_IMAGE;
 
 #pragma mark - Error Strings
 extern NSString *const ERROR_EMAIL_REQUIRED;
@@ -79,6 +80,7 @@ extern NSString *const KEYCHAIN_KEY_ID;
 extern NSString *const KEYCHAIN_KEY_NAME;
 extern NSString *const KEYCHAIN_KEY_EMAIL;
 extern NSString *const KEYCHAIN_KEY_REMEMBERED;
+extern NSString *const KEYCHAIN_KEY_AVATAR;
 
 #pragma mark - String Literals
 extern NSString *const LEARNED;
@@ -91,5 +93,14 @@ extern NSString *const TO_PROFILE;
 
 #pragma mark - Constant values 
 extern int const PER_PAGE_DATA;
+
+#pragma mark - Title Message String values
+extern NSString *const TITLE_AVATAR;
+extern NSString *const TITLE_AVATAR_MESSAGE;
+extern NSString *const TITLE_CANCEL;
+extern NSString *const TITLE_GALLERY;
+extern NSString *const TITLE_CAMERA;
+extern NSString *const TITLE_CAMERA_UNAVAILABLE_ERROR;
+extern NSString *const TITLE_CAMERA_ERROR;
 
 @end
