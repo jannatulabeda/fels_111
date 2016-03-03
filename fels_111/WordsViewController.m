@@ -25,6 +25,8 @@
     NSMutableArray *allCategoryArray;
     int categoryPageCount;
     int categoryTotalPages;
+    DropDownListView *_dropDownListTemp; // Temporary holds the dropDownListview
+    UIView *dropDownView; // Contains the dropdown list
 }
 @property (weak, nonatomic) IBOutlet UIButton *categoryButton;
 @property (weak, nonatomic) IBOutlet UIButton *learnedButton;
@@ -43,6 +45,7 @@ NSString *const _NOT_LEARNED = @"Not learned";
     self.wordListArray = [[NSMutableArray alloc]init];
     allCategoryArray = [[NSMutableArray alloc]init];
     categoryButtonTextDict = [[NSMutableDictionary alloc]init];
+    dropDownView = [[UIView alloc]initWithFrame:self.view.frame];
     [self setupButtons];
     // Do any additional setup after loading the view.
     [JTProgressHUD show];
@@ -148,7 +151,7 @@ NSString *const _NOT_LEARNED = @"Not learned";
                               xy:CGPointMake(self.categoryButton.frame.origin.x + 20, self.categoryButton.frame.origin.y + self.categoryButton.frame.size.height)
                             size:CGSizeMake(self.categoryButton.frame.size.width - 20, 200)
                       isMultiple:NO
-                             tag:self.categoryButton.tag];
+                             tag:(int)self.categoryButton.tag];
     }
 }
 
@@ -159,7 +162,7 @@ NSString *const _NOT_LEARNED = @"Not learned";
                               xy:CGPointMake(self.learnedButton.frame.origin.x, self.learnedButton.frame.origin.y + self.learnedButton.frame.size.height)
                             size:CGSizeMake(self.learnedButton.frame.size.width - 20, 200)
                       isMultiple:NO
-                             tag:self.learnedButton.tag];
+                             tag:(int)self.learnedButton.tag];
     }
 }
 
@@ -198,9 +201,12 @@ NSString *const _NOT_LEARNED = @"Not learned";
                isMultiple:(BOOL)isMultiple
                       tag:(int)tag{
     DropDownListView *dropDownList = [[DropDownListView alloc]initWithTitle:popupTitle options:arrOptions xy:point size:size isMultiple:isMultiple];
+    _dropDownListTemp = dropDownList;
     dropDownList.tag = tag;
     dropDownList.delegate = self;
-    [dropDownList showInView:self.view animated:YES];
+    [self.view addSubview:dropDownView];
+//    [dropDownView setBackgroundColor:[UIColor redColor]];
+    [dropDownList showInView:dropDownView animated:YES];
     // Set DropDown backGroundColor
     [dropDownList SetBackGroundDropDown_R:220.0 G:220.0 B:220.0 alpha:1.0];
     isDropDownVisible = YES;
@@ -225,12 +231,24 @@ NSString *const _NOT_LEARNED = @"Not learned";
     categoryId = [allKeysCategoryDict lastObject];
     [self getWordListWithCategoryId:categoryId
                              option:[self getKeyOfLearnedDictionaryForKey:learned]];
+    [dropDownView removeFromSuperview];
 }
 
 - (void)DropDownListView:(DropDownListView *)dropdownListView Datalist:(NSMutableArray *)ArryData {
 }
 
 - (void)DropDownListViewDidCancel{
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    if (isDropDownVisible) {
+        if (_dropDownListTemp) {
+            [_dropDownListTemp fadeOut];
+            isDropDownVisible = NO;
+            [dropDownView removeFromSuperview];
+        }
+    }
+    [self.view endEditing:YES];
 }
 
 @end
