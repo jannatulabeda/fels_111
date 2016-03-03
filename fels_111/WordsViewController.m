@@ -148,8 +148,8 @@ NSString *const _NOT_LEARNED = @"Not learned";
     if (!isDropDownVisible) {
         [self showPopUpWithTitle:@"Select category"
                       withOption:[categoryButtonTextDict allValues]
-                              xy:CGPointMake(self.categoryButton.frame.origin.x + 20, self.categoryButton.frame.origin.y + self.categoryButton.frame.size.height)
-                            size:CGSizeMake(self.categoryButton.frame.size.width - 20, 200)
+                              xy:CGPointMake(self.categoryButton.frame.origin.x + 20.0, self.categoryButton.frame.origin.y + self.categoryButton.frame.size.height)
+                            size:CGSizeMake(self.categoryButton.frame.size.width - 20.0, 200.0)
                       isMultiple:NO
                              tag:(int)self.categoryButton.tag];
     }
@@ -160,7 +160,7 @@ NSString *const _NOT_LEARNED = @"Not learned";
         [self showPopUpWithTitle:@"Select option"
                       withOption:learnedButtonTextArray
                               xy:CGPointMake(self.learnedButton.frame.origin.x, self.learnedButton.frame.origin.y + self.learnedButton.frame.size.height)
-                            size:CGSizeMake(self.learnedButton.frame.size.width - 20, 200)
+                            size:CGSizeMake(self.learnedButton.frame.size.width - 20.0, 200.0)
                       isMultiple:NO
                              tag:(int)self.learnedButton.tag];
     }
@@ -205,7 +205,6 @@ NSString *const _NOT_LEARNED = @"Not learned";
     dropDownList.tag = tag;
     dropDownList.delegate = self;
     [self.view addSubview:dropDownView];
-//    [dropDownView setBackgroundColor:[UIColor redColor]];
     [dropDownList showInView:dropDownView animated:YES];
     // Set DropDown backGroundColor
     [dropDownList SetBackGroundDropDown_R:220.0 G:220.0 B:220.0 alpha:1.0];

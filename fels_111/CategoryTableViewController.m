@@ -31,12 +31,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.categoryArray = [[NSMutableArray alloc] init];
-    // Initially page number is set to 1
-    pageNumber = 1;
     [self.tableView setDragDelegate:self refreshDatePermanentKey:@"CategoryList"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    // Initially page number is set to 1
+    pageNumber = 1;
+    self.tableView.showRefreshView = NO;
+    self.tableView.showLoadMoreView = YES;
+    
     // Clear category array
     [self.categoryArray removeAllObjects];
     
@@ -44,7 +47,6 @@
     [JTProgressHUD show];
     CategoryManager *categoryManager = [[CategoryManager alloc] init];
     categoryManager.delegate = self;
-    
     // Send request for category list
     User *user = [Utils getUserFromKeychain];
     [categoryManager doGetCategoriesWithAuthToken:user.authToken pageNumber:pageNumber perPageData:PER_PAGE_DATA];
@@ -112,6 +114,8 @@
 // Receive category data from API response
 - (void)didReceiveCategoryDataWithArray:(NSArray *)categoryArray {
     if (categoryArray && categoryArray.count > 0) {
+        LessonCategory *category = [categoryArray objectAtIndex:0];
+        totalPages = category.totalPages;
         [self.categoryArray addObjectsFromArray:categoryArray];
         [self.tableView reloadData];
     }
@@ -123,10 +127,6 @@
 
 #pragma mark - Control datasource
 - (void)finishLoadMore {
-    if (pageNumber == totalPages) {
-        [self.tableView finishLoadMore];
-        return;
-    }
     // Get Category list
     [JTProgressHUD show];
     CategoryManager *categoryManager = [[CategoryManager alloc] init];
@@ -135,6 +135,10 @@
     User *user = [Utils getUserFromKeychain];
     [categoryManager doGetCategoriesWithAuthToken:user.authToken pageNumber:++pageNumber perPageData:PER_PAGE_DATA];
     [self.tableView finishLoadMore];
+    
+    if (pageNumber == totalPages) {
+        self.tableView.showLoadMoreView = NO;
+    }
 }
 
 #pragma mark - Drag delegate methods

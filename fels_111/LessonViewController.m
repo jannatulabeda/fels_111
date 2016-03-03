@@ -14,6 +14,7 @@
 #import "JTProgressHUD.h"
 #import "Utils.h"
 #import "User.h"
+#import "ResultTableViewController.h"
 
 @interface LessonViewController () <LessonDelegate>
 
@@ -76,9 +77,14 @@
 - (void)loadNextQuestionAndAnswers {
     if (countWord >= [self.wordsArray count]) {
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Lesson finished"
-                                                                                 message:@"Please press done to see the result"
+                                                                                 message:@"Press OK to see the result."
                                                                           preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+        UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            UIStoryboard *lessonStoryboard = [UIStoryboard storyboardWithName:@"Lesson" bundle: nil];
+            ResultTableViewController *resultTableViewController = [lessonStoryboard instantiateViewControllerWithIdentifier:@"ResultTableViewController"];
+            resultTableViewController.lesson = self.lesson;
+            [self.navigationController pushViewController:resultTableViewController animated:YES];
+        }];
         [alertController addAction:ok];
         [self presentViewController:alertController animated:YES completion:nil];
         return;
@@ -108,17 +114,19 @@
     word.answered = [word.answersArray objectAtIndex:button.tag - 1];
     word.isCorrectlyAnswered = word.answered.isCorrect ? YES : NO;
     [self.wordsArray replaceObjectAtIndex:countWord-1 withObject:word];
-
-    // Load next word and answers
-    // Send request for create lesson
-    [JTProgressHUD show];
-    LessonManager *lessonManager = [[LessonManager alloc] init];
-    lessonManager.delegate = self;
-    User *user = [Utils getUserFromKeychain];
-    [lessonManager doUpdateLessonWithAuthToken:user.authToken
-                                      lessonId:[self.lesson lessonId]
-                                      resutlId:[word.resultId intValue]
-                                      answerId:[word.answered answerId]];
+    [self loadNextQuestionAndAnswers];
+    
+    dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        // Load next word and answers
+        // Send request for create lesson
+        LessonManager *lessonManager = [[LessonManager alloc] init];
+        lessonManager.delegate = self;
+        User *user = [Utils getUserFromKeychain];
+        [lessonManager doUpdateLessonWithAuthToken:user.authToken
+                                          lessonId:[self.lesson lessonId]
+                                          resutlId:[word.resultId intValue]
+                                          answerId:[word.answered answerId]];
+    });
 }
 
 - (IBAction)nextButtonPressed:(id)sender {
@@ -145,9 +153,7 @@
 }
 
 - (void)didReceiveUpdateLessonResponseWithBool:(BOOL)isSuccess {
-    [JTProgressHUD hide];
     if (isSuccess) {
-        [self loadNextQuestionAndAnswers];
     }
 }
 @end
