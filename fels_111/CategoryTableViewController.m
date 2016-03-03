@@ -15,10 +15,12 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "User.h"
 #import "Utils.h"
+#import "UITableView+DragLoad.h"
 
-@interface CategoryTableViewController () <UITableViewDataSource, UITableViewDelegate, CategoryDelegate> {
+@interface CategoryTableViewController () <UITableViewDataSource, UITableViewDelegate, CategoryDelegate, UITableViewDragLoadDelegate> {
     int pageNumber; // Page number to send API request
     int perPageData; // Number of data to load per page
+    int totalPages; // Total page number
 }
 
 @property (strong, nonatomic) NSMutableArray *categoryArray;
@@ -31,6 +33,7 @@
     self.categoryArray = [[NSMutableArray alloc] init];
     // Initially page number is set to 1
     pageNumber = 1;
+    [self.tableView setDragDelegate:self refreshDatePermanentKey:@"CategoryList"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -111,15 +114,37 @@
     if (categoryArray && categoryArray.count > 0) {
         [self.categoryArray addObjectsFromArray:categoryArray];
         [self.tableView reloadData];
-    } else {
-        UILabel *noCategoryLabel = [[UILabel alloc]init];
-        noCategoryLabel.text = @"No category found!!! :(";
-        [noCategoryLabel sizeToFit];
-        [self.view addSubview:noCategoryLabel];
     }
     [JTProgressHUD hide];
 }
 
 -(IBAction)prepareForUnwind:(UIStoryboardSegue *)segue {
+}
+
+#pragma mark - Control datasource
+- (void)finishLoadMore {
+    if (pageNumber == totalPages) {
+        [self.tableView finishLoadMore];
+        return;
+    }
+    // Get Category list
+    [JTProgressHUD show];
+    CategoryManager *categoryManager = [[CategoryManager alloc] init];
+    categoryManager.delegate = self;
+    // Send request for category list
+    User *user = [Utils getUserFromKeychain];
+    [categoryManager doGetCategoriesWithAuthToken:user.authToken pageNumber:++pageNumber perPageData:PER_PAGE_DATA];
+    [self.tableView finishLoadMore];
+}
+
+#pragma mark - Drag delegate methods
+- (void)dragTableDidTriggerLoadMore:(UITableView *)tableView {
+    // Send load more request
+    [self performSelector:@selector(finishLoadMore) withObject:nil afterDelay:2];
+}
+
+- (void)dragTableLoadMoreCanceled:(UITableView *)tableView {
+    // Cancel load more request
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(finishLoadMore) object:nil];
 }
 @end

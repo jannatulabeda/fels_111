@@ -12,6 +12,8 @@
 #import "APIHandler.h"
 #import "User.h"
 #import "Parser.h"
+#import "Constants.h"
+#import "LessonCategory.h"
 
 @implementation CategoryManager
 
@@ -19,7 +21,6 @@
 - (void)doGetCategoriesWithAuthToken:(NSString *)authToken
                           pageNumber:(int)page
                          perPageData:(int)perPageData {
-    
     // Send Get Categories API request
     NSDictionary *param = [MakeParam makeCategoryParamWithPage:page
                                                        perPage:perPageData

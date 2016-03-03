@@ -41,6 +41,13 @@
 		B1032B0B1C7C81A500D7B269 /* ResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1032B091C7C81A500D7B269 /* ResultTableViewCell.m */; };
 		B153B75B1C7F3EEF0039BF33 /* LessonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B153B75A1C7F3EEF0039BF33 /* LessonManager.m */; };
 		B1587E661C84250B00C27E73 /* RegisterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B1587E651C84250B00C27E73 /* RegisterManager.m */; };
+		B16675161C8687970098AD49 /* WordsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B16675151C8687970098AD49 /* WordsViewController.m */; };
+		B16675291C86B35E0098AD49 /* check_mark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B16675221C86B35E0098AD49 /* check_mark@2x.png */; };
+		B166752A1C86B35E0098AD49 /* done@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B16675231C86B35E0098AD49 /* done@2x.png */; };
+		B166752B1C86B35E0098AD49 /* drop_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B16675241C86B35E0098AD49 /* drop_down@2x.png */; };
+		B166752C1C86B35E0098AD49 /* DropDownListView.m in Sources */ = {isa = PBXBuildFile; fileRef = B16675261C86B35E0098AD49 /* DropDownListView.m */; };
+		B166752D1C86B35E0098AD49 /* DropDownViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B16675281C86B35E0098AD49 /* DropDownViewCell.m */; };
+		B16675311C86D5850098AD49 /* WordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B16675301C86D5850098AD49 /* WordTableViewCell.m */; };
 		B1891E1B1C7F196400EF27A7 /* CategoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B1891E1A1C7F196400EF27A7 /* CategoryManager.m */; };
 		B189888A1C7DE2C700543F50 /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = B18988851C7DE2C700543F50 /* Answer.m */; };
 		B189888B1C7DE2C700543F50 /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = B18988871C7DE2C700543F50 /* Word.m */; };
@@ -51,6 +58,14 @@
 		B1E7F8531C75C5360096920B /* MakeURL.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E7F84E1C75C5360096920B /* MakeURL.m */; };
 		B1E7F8541C75C5360096920B /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = B1E7F8501C75C5360096920B /* Parser.m */; };
 		B1F406991C85CE9E00304777 /* WordListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F406981C85CE9E00304777 /* WordListManager.m */; };
+		B1F5FB4A1C87DF9F00B00D1D /* ComOpenThreadOTScreenshotHelperSwizzleHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F5FB401C87DF9F00B00D1D /* ComOpenThreadOTScreenshotHelperSwizzleHelper.m */; };
+		B1F5FB4B1C87DF9F00B00D1D /* DragTableFooterView_ot.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F5FB431C87DF9F00B00D1D /* DragTableFooterView_ot.m */; };
+		B1F5FB4C1C87DF9F00B00D1D /* DragTableGestureObserver_ot.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F5FB451C87DF9F00B00D1D /* DragTableGestureObserver_ot.m */; };
+		B1F5FB4D1C87DF9F00B00D1D /* DragTableHeaderView_ot.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F5FB471C87DF9F00B00D1D /* DragTableHeaderView_ot.m */; };
+		B1F5FB4E1C87DF9F00B00D1D /* UIScrollView+DragTableSafeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F5FB491C87DF9F00B00D1D /* UIScrollView+DragTableSafeAnimation.m */; };
+		B1F5FB521C87DFC300B00D1D /* UITableView+DragLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F5FB511C87DFC300B00D1D /* UITableView+DragLoad.m */; };
+		B1F5FB561C87DFDA00B00D1D /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = B1F5FB541C87DFDA00B00D1D /* blueArrow.png */; };
+		B1F5FB571C87DFDA00B00D1D /* blueArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B1F5FB551C87DFDA00B00D1D /* blueArrow@2x.png */; };
 		B1F7055C1C7DAB1C00034303 /* LessonCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F7055B1C7DAB1C00034303 /* LessonCategory.m */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +127,17 @@
 		B153B75A1C7F3EEF0039BF33 /* LessonManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LessonManager.m; sourceTree = "<group>"; };
 		B1587E641C84250B00C27E73 /* RegisterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterManager.h; sourceTree = "<group>"; };
 		B1587E651C84250B00C27E73 /* RegisterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterManager.m; sourceTree = "<group>"; };
+		B16675141C8687970098AD49 /* WordsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordsViewController.h; sourceTree = "<group>"; };
+		B16675151C8687970098AD49 /* WordsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordsViewController.m; sourceTree = "<group>"; };
+		B16675221C86B35E0098AD49 /* check_mark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check_mark@2x.png"; sourceTree = "<group>"; };
+		B16675231C86B35E0098AD49 /* done@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "done@2x.png"; sourceTree = "<group>"; };
+		B16675241C86B35E0098AD49 /* drop_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "drop_down@2x.png"; sourceTree = "<group>"; };
+		B16675251C86B35E0098AD49 /* DropDownListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDownListView.h; sourceTree = "<group>"; };
+		B16675261C86B35E0098AD49 /* DropDownListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropDownListView.m; sourceTree = "<group>"; };
+		B16675271C86B35E0098AD49 /* DropDownViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDownViewCell.h; sourceTree = "<group>"; };
+		B16675281C86B35E0098AD49 /* DropDownViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropDownViewCell.m; sourceTree = "<group>"; };
+		B166752F1C86D5850098AD49 /* WordTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordTableViewCell.h; sourceTree = "<group>"; };
+		B16675301C86D5850098AD49 /* WordTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordTableViewCell.m; sourceTree = "<group>"; };
 		B1891E191C7F196400EF27A7 /* CategoryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryManager.h; sourceTree = "<group>"; };
 		B1891E1A1C7F196400EF27A7 /* CategoryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryManager.m; sourceTree = "<group>"; };
 		B18988841C7DE2C700543F50 /* Answer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Answer.h; sourceTree = "<group>"; };
@@ -132,6 +158,21 @@
 		B1E7F8501C75C5360096920B /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parser.m; sourceTree = "<group>"; };
 		B1F406971C85CE9E00304777 /* WordListManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordListManager.h; sourceTree = "<group>"; };
 		B1F406981C85CE9E00304777 /* WordListManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordListManager.m; sourceTree = "<group>"; };
+		B1F5FB3F1C87DF9F00B00D1D /* ComOpenThreadOTScreenshotHelperSwizzleHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComOpenThreadOTScreenshotHelperSwizzleHelper.h; path = UITableViewDragLoad/PrivateClass/ComOpenThreadOTScreenshotHelperSwizzleHelper.h; sourceTree = "<group>"; };
+		B1F5FB401C87DF9F00B00D1D /* ComOpenThreadOTScreenshotHelperSwizzleHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComOpenThreadOTScreenshotHelperSwizzleHelper.m; path = UITableViewDragLoad/PrivateClass/ComOpenThreadOTScreenshotHelperSwizzleHelper.m; sourceTree = "<group>"; };
+		B1F5FB411C87DF9F00B00D1D /* DragTableDragState_ot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DragTableDragState_ot.h; path = UITableViewDragLoad/PrivateClass/DragTableDragState_ot.h; sourceTree = "<group>"; };
+		B1F5FB421C87DF9F00B00D1D /* DragTableFooterView_ot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DragTableFooterView_ot.h; path = UITableViewDragLoad/PrivateClass/DragTableFooterView_ot.h; sourceTree = "<group>"; };
+		B1F5FB431C87DF9F00B00D1D /* DragTableFooterView_ot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DragTableFooterView_ot.m; path = UITableViewDragLoad/PrivateClass/DragTableFooterView_ot.m; sourceTree = "<group>"; };
+		B1F5FB441C87DF9F00B00D1D /* DragTableGestureObserver_ot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DragTableGestureObserver_ot.h; path = UITableViewDragLoad/PrivateClass/DragTableGestureObserver_ot.h; sourceTree = "<group>"; };
+		B1F5FB451C87DF9F00B00D1D /* DragTableGestureObserver_ot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DragTableGestureObserver_ot.m; path = UITableViewDragLoad/PrivateClass/DragTableGestureObserver_ot.m; sourceTree = "<group>"; };
+		B1F5FB461C87DF9F00B00D1D /* DragTableHeaderView_ot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DragTableHeaderView_ot.h; path = UITableViewDragLoad/PrivateClass/DragTableHeaderView_ot.h; sourceTree = "<group>"; };
+		B1F5FB471C87DF9F00B00D1D /* DragTableHeaderView_ot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DragTableHeaderView_ot.m; path = UITableViewDragLoad/PrivateClass/DragTableHeaderView_ot.m; sourceTree = "<group>"; };
+		B1F5FB481C87DF9F00B00D1D /* UIScrollView+DragTableSafeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+DragTableSafeAnimation.h"; path = "UITableViewDragLoad/PrivateClass/UIScrollView+DragTableSafeAnimation.h"; sourceTree = "<group>"; };
+		B1F5FB491C87DF9F00B00D1D /* UIScrollView+DragTableSafeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+DragTableSafeAnimation.m"; path = "UITableViewDragLoad/PrivateClass/UIScrollView+DragTableSafeAnimation.m"; sourceTree = "<group>"; };
+		B1F5FB501C87DFC300B00D1D /* UITableView+DragLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableView+DragLoad.h"; path = "UITableViewDragLoad/PublicClass/UITableView+DragLoad.h"; sourceTree = "<group>"; };
+		B1F5FB511C87DFC300B00D1D /* UITableView+DragLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableView+DragLoad.m"; path = "UITableViewDragLoad/PublicClass/UITableView+DragLoad.m"; sourceTree = "<group>"; };
+		B1F5FB541C87DFDA00B00D1D /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blueArrow.png; path = UITableViewDragLoad/Resources/blueArrow.png; sourceTree = "<group>"; };
+		B1F5FB551C87DFDA00B00D1D /* blueArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "blueArrow@2x.png"; path = "UITableViewDragLoad/Resources/blueArrow@2x.png"; sourceTree = "<group>"; };
 		B1F7055A1C7DAB1C00034303 /* LessonCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LessonCategory.h; sourceTree = "<group>"; };
 		B1F7055B1C7DAB1C00034303 /* LessonCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LessonCategory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,6 +210,8 @@
 		64189FD81C732C950067F895 /* fels_111 */ = {
 			isa = PBXGroup;
 			children = (
+				B1F5FB591C87DFE500B00D1D /* UITableViewDragLoad */,
+				B166752E1C86B3690098AD49 /* KDropdownList */,
 				648EC83C1C7B09B000D62327 /* Manager */,
 				B1032B0C1C7C81CC00D7B269 /* TableCell */,
 				B1E7F8551C75C53E0096920B /* APIHandler */,
@@ -239,6 +282,8 @@
 				64189FE01C732C950067F895 /* LoginViewController.m */,
 				64FF16011C7588FB00AAB7EE /* RegisterViewController.h */,
 				64FF16021C7588FB00AAB7EE /* RegisterViewController.m */,
+				B16675141C8687970098AD49 /* WordsViewController.h */,
+				B16675151C8687970098AD49 /* WordsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -318,8 +363,24 @@
 				B1032B091C7C81A500D7B269 /* ResultTableViewCell.m */,
 				6474454F1C808263004C2DD7 /* UserActivityTableViewCell.h */,
 				647445501C808263004C2DD7 /* UserActivityTableViewCell.m */,
+				B166752F1C86D5850098AD49 /* WordTableViewCell.h */,
+				B16675301C86D5850098AD49 /* WordTableViewCell.m */,
 			);
 			name = TableCell;
+			sourceTree = "<group>";
+		};
+		B166752E1C86B3690098AD49 /* KDropdownList */ = {
+			isa = PBXGroup;
+			children = (
+				B16675221C86B35E0098AD49 /* check_mark@2x.png */,
+				B16675231C86B35E0098AD49 /* done@2x.png */,
+				B16675241C86B35E0098AD49 /* drop_down@2x.png */,
+				B16675251C86B35E0098AD49 /* DropDownListView.h */,
+				B16675261C86B35E0098AD49 /* DropDownListView.m */,
+				B16675271C86B35E0098AD49 /* DropDownViewCell.h */,
+				B16675281C86B35E0098AD49 /* DropDownViewCell.m */,
+			);
+			name = KDropdownList;
 			sourceTree = "<group>";
 		};
 		B1E7F8551C75C53E0096920B /* APIHandler */ = {
@@ -335,6 +396,52 @@
 				B1E7F8501C75C5360096920B /* Parser.m */,
 			);
 			name = APIHandler;
+			sourceTree = "<group>";
+		};
+		B1F5FB4F1C87DFAC00B00D1D /* PrivateClass */ = {
+			isa = PBXGroup;
+			children = (
+				B1F5FB3F1C87DF9F00B00D1D /* ComOpenThreadOTScreenshotHelperSwizzleHelper.h */,
+				B1F5FB401C87DF9F00B00D1D /* ComOpenThreadOTScreenshotHelperSwizzleHelper.m */,
+				B1F5FB411C87DF9F00B00D1D /* DragTableDragState_ot.h */,
+				B1F5FB421C87DF9F00B00D1D /* DragTableFooterView_ot.h */,
+				B1F5FB431C87DF9F00B00D1D /* DragTableFooterView_ot.m */,
+				B1F5FB441C87DF9F00B00D1D /* DragTableGestureObserver_ot.h */,
+				B1F5FB451C87DF9F00B00D1D /* DragTableGestureObserver_ot.m */,
+				B1F5FB461C87DF9F00B00D1D /* DragTableHeaderView_ot.h */,
+				B1F5FB471C87DF9F00B00D1D /* DragTableHeaderView_ot.m */,
+				B1F5FB481C87DF9F00B00D1D /* UIScrollView+DragTableSafeAnimation.h */,
+				B1F5FB491C87DF9F00B00D1D /* UIScrollView+DragTableSafeAnimation.m */,
+			);
+			name = PrivateClass;
+			sourceTree = "<group>";
+		};
+		B1F5FB531C87DFC700B00D1D /* PublicClass */ = {
+			isa = PBXGroup;
+			children = (
+				B1F5FB501C87DFC300B00D1D /* UITableView+DragLoad.h */,
+				B1F5FB511C87DFC300B00D1D /* UITableView+DragLoad.m */,
+			);
+			name = PublicClass;
+			sourceTree = "<group>";
+		};
+		B1F5FB581C87DFDD00B00D1D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B1F5FB541C87DFDA00B00D1D /* blueArrow.png */,
+				B1F5FB551C87DFDA00B00D1D /* blueArrow@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B1F5FB591C87DFE500B00D1D /* UITableViewDragLoad */ = {
+			isa = PBXGroup;
+			children = (
+				B1F5FB581C87DFDD00B00D1D /* Resources */,
+				B1F5FB531C87DFC700B00D1D /* PublicClass */,
+				B1F5FB4F1C87DFAC00B00D1D /* PrivateClass */,
+			);
+			name = UITableViewDragLoad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,12 +510,17 @@
 				64AD8A271C743CE3004E4A3C /* checked.png in Resources */,
 				64189FEC1C732C960067F895 /* LaunchScreen.storyboard in Resources */,
 				6474454E1C8077D5004C2DD7 /* Word.storyboard in Resources */,
+				B1F5FB571C87DFDA00B00D1D /* blueArrow@2x.png in Resources */,
+				B1F5FB561C87DFDA00B00D1D /* blueArrow.png in Resources */,
 				64AD8A2B1C744085004E4A3C /* pass_key.png in Resources */,
 				64189FE91C732C960067F895 /* Assets.xcassets in Resources */,
 				648D83DF1C76DE7600F543B6 /* name.png in Resources */,
+				B166752B1C86B35E0098AD49 /* drop_down@2x.png in Resources */,
 				6485EA5B1C7D71D900D7A7F9 /* learned.png in Resources */,
 				64AD8A291C743FD4004E4A3C /* email_icon.png in Resources */,
 				64189FE41C732C950067F895 /* Main.storyboard in Resources */,
+				B16675291C86B35E0098AD49 /* check_mark@2x.png in Resources */,
+				B166752A1C86B35E0098AD49 /* done@2x.png in Resources */,
 				64AD8A251C743C10004E4A3C /* unchecked.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,24 +580,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1F5FB4E1C87DF9F00B00D1D /* UIScrollView+DragTableSafeAnimation.m in Sources */,
 				64AD8A2E1C7491F9004E4A3C /* Constants.m in Sources */,
 				B1032B0A1C7C81A500D7B269 /* CategoryTableViewCell.m in Sources */,
 				B1032B0B1C7C81A500D7B269 /* ResultTableViewCell.m in Sources */,
 				B1032B031C7C817900D7B269 /* CategoryTableViewController.m in Sources */,
 				64FF16031C7588FB00AAB7EE /* RegisterViewController.m in Sources */,
 				64189FE11C732C950067F895 /* LoginViewController.m in Sources */,
+				B1F5FB4D1C87DF9F00B00D1D /* DragTableHeaderView_ot.m in Sources */,
 				6485EA5E1C7D766200D7A7F9 /* UpdateViewController.m in Sources */,
 				B1E7F8481C75C5160096920B /* User.m in Sources */,
 				B189888C1C7DE2C700543F50 /* Lesson.m in Sources */,
 				B1587E661C84250B00C27E73 /* RegisterManager.m in Sources */,
 				B153B75B1C7F3EEF0039BF33 /* LessonManager.m in Sources */,
+				B1F5FB521C87DFC300B00D1D /* UITableView+DragLoad.m in Sources */,
 				B189888A1C7DE2C700543F50 /* Answer.m in Sources */,
 				B189888B1C7DE2C700543F50 /* Word.m in Sources */,
 				B1032B041C7C817900D7B269 /* LessonViewController.m in Sources */,
 				B1F7055C1C7DAB1C00034303 /* LessonCategory.m in Sources */,
+				B1F5FB4C1C87DF9F00B00D1D /* DragTableGestureObserver_ot.m in Sources */,
 				64189FDE1C732C950067F895 /* AppDelegate.m in Sources */,
 				6485EA621C7DB83800D7A7F9 /* Utils.m in Sources */,
+				B166752C1C86B35E0098AD49 /* DropDownListView.m in Sources */,
 				B1F406991C85CE9E00304777 /* WordListManager.m in Sources */,
+				B16675311C86D5850098AD49 /* WordTableViewCell.m in Sources */,
 				6474454C1C804B00004C2DD7 /* ProfileManager.m in Sources */,
 				648EC8421C7B112B00D62327 /* LoginManager.m in Sources */,
 				B1E7F8541C75C5360096920B /* Parser.m in Sources */,
@@ -496,9 +614,13 @@
 				B1032B051C7C817900D7B269 /* ResultTableViewController.m in Sources */,
 				647445511C808263004C2DD7 /* UserActivityTableViewCell.m in Sources */,
 				6485EA571C7D691D00D7A7F9 /* ProfileViewController.m in Sources */,
+				B1F5FB4B1C87DF9F00B00D1D /* DragTableFooterView_ot.m in Sources */,
+				B16675161C8687970098AD49 /* WordsViewController.m in Sources */,
 				64189FFD1C7334270067F895 /* DataValidation.m in Sources */,
 				B1E7F8531C75C5360096920B /* MakeURL.m in Sources */,
+				B166752D1C86B35E0098AD49 /* DropDownViewCell.m in Sources */,
 				B1E7F8511C75C5360096920B /* APIHandler.m in Sources */,
+				B1F5FB4A1C87DF9F00B00D1D /* ComOpenThreadOTScreenshotHelperSwizzleHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
