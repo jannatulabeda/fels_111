@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordLoginTextField;
 @property (weak, nonatomic) IBOutlet UILabel *loginErrorLabel;
 @property (assign, nonatomic) BOOL rememberMeChecked;
+@property (strong, nonatomic) NSString *emailString;
+@property (strong, nonatomic) NSString *passwordString;
 
 - (IBAction)toggleRememberMeButtonImage:(id)sender;
 

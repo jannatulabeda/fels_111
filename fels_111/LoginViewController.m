@@ -25,6 +25,7 @@
 
 -(void)viewWillAppear:(BOOL)animated {
   [self clearFieldData];
+  self.emailLoginTextField.text = _emailString;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -69,7 +70,6 @@
 }
 
 - (void)clearFieldData {
-  self.emailLoginTextField.text = @"";
   self.passwordLoginTextField.text = @"";
   self.loginErrorLabel.text = @"";
 }
