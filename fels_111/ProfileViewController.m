@@ -13,8 +13,11 @@
 #import "JTProgressHUD.h"
 #import "Constants.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "LoginViewController.h"
 
 @interface ProfileViewController ()
+
+@property (strong, nonatomic) NSString *emailString;
 
 @end
 
@@ -33,15 +36,17 @@
   // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+   if([segue.identifier isEqualToString:TO_LOGIN]){
+     LoginViewController *controller = (LoginViewController *)segue.destinationViewController;
+     controller.emailString = _emailString;
+   }
 }
-*/
+
+#pragma mark - Load User Info
 
 - (void)loadUserData {
   User *user = [[User alloc] init];
@@ -52,6 +57,7 @@
                                  self.userActivityArray = [[NSArray alloc] initWithArray:usr.activities];
                                  dispatch_async(dispatch_get_main_queue(), ^{
                                    [self fillOutTheFields:usr];
+                                   _emailString = usr.email;
                                    [self.userActivityTableView reloadData];
                                  });  
                                } else {
